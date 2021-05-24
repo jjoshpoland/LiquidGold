@@ -9,8 +9,17 @@ using UnityEngine;
 public class TerrainStructureConstraint : StructurePlacementConstraint
 {
     public TileType requiredType;
+    public bool excludeThisType;
     public override bool Evaluate(Tile targetPlacement, Building targetStructure)
     {
-        return targetPlacement.type == requiredType;
+        if(!excludeThisType)
+        {
+            return targetPlacement.type == requiredType;
+        }
+        else
+        {
+            return targetPlacement.type != requiredType;
+        }
+        
     }
 }

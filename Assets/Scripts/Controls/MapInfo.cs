@@ -9,7 +9,7 @@ public class MapInfo : MonoBehaviour
 {
     public static MapInfo singleton;
     Vector2 mousePos;
-    LayerMask mouseInteractions;
+    public LayerMask mouseInteractions;
     public Tile currentTile;
     Building currentBuilding;
     public TMP_Text mapinfotext;
@@ -35,11 +35,16 @@ public class MapInfo : MonoBehaviour
     {
 
         Ray cursorRay = Camera.main.ScreenPointToRay(mousePos);
-        if (Physics.Raycast(cursorRay, out RaycastHit hitinfo))
+        
+        if (Physics.Raycast(cursorRay, out RaycastHit hitinfo, float.MaxValue, mouseInteractions))
         {
             if (hitinfo.collider.TryGetComponent<Tile>(out Tile tile))
             {
                 return tile;
+            }
+            else
+            {
+                //Debug.Log("raycast hitting " + hitinfo.collider.name);
             }
         }
         return null;

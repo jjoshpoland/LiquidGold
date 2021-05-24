@@ -73,7 +73,7 @@ public class Producer : MonoBehaviour
             {
                 foreach(Good output in productionRecipe.outputs)
                 {
-                    Debug.Log(name + " produced " + output);
+                    //Debug.Log(name + " produced " + output);
                     outputInventory.Deposit(output);
                     OnOutput.Invoke(output);
                 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TileMap : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class TileMap : MonoBehaviour
 
     SimplexNoiseGenerator simplexNoise;
 
+    public UnityEvent OnGenerateComplete;
+    public UnityEvent OnTileReplacement;
+
     private void Awake()
     {
         singleton = this;
@@ -40,7 +44,7 @@ public class TileMap : MonoBehaviour
         GenerateValues();
         SpawnTiles();
 
-        
+        OnGenerateComplete.Invoke();
     }
 
     // Update is called once per frame
@@ -59,7 +63,18 @@ public class TileMap : MonoBehaviour
             for (int y = 0; y < size; y++)
             {
                 float noiseValue = (simplexNoise.coherentNoise((float)(x), 0f, (float)(y)) * 10f);
+                
                 noiseValue = (noiseValue + 1f) / 2f;
+                float distanceFromCenter = Mathf.Abs(x - (size / 2f)) + Mathf.Abs(y - (size / 2f));
+                float normDistFromCenter = distanceFromCenter / size;
+                float invertedDistFromCenter = 1f - normDistFromCenter;
+                
+                if(noiseValue < waterMax)
+                {
+                    noiseValue = Mathf.Min( (invertedDistFromCenter), grassMax);
+                }
+
+
                 values[x, y] = noiseValue;
                 //Debug.Log(values[x, y]);
             }
@@ -122,7 +137,7 @@ public class TileMap : MonoBehaviour
     /// <returns></returns>
     public bool ValidCoords(Vector2Int coords)
     {
-        return !(coords.x < 0 || coords.x >= size || coords.y <= 0 || coords.y >= size);
+        return !(coords.x < 0 || coords.x >= size || coords.y < 0 || coords.y >= size);
     }
 
     /// <summary>
@@ -179,7 +194,8 @@ public class TileMap : MonoBehaviour
             newTileInstance.transform.position = oldTile.transform.position;
             newTileInstance.coords = oldTile.coords;
             tiles[coords.x, coords.y] = newTileInstance;
-            Destroy(oldTile);
+            Destroy(oldTile.gameObject);
+            OnTileReplacement.Invoke();
             return true;
         }
         else

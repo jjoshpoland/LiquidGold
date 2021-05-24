@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 199553659770035445}
   - component: {fileID: 199553659770035446}
   - component: {fileID: 199553659770035447}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 199553659913409999}
   - component: {fileID: 199553659913409992}
   - component: {fileID: 199553659913409993}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 199553660181735689}
   - component: {fileID: 199553660181735690}
   - component: {fileID: 199553660181735691}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 199553660663557601}
   - component: {fileID: 199553660663557602}
   - component: {fileID: 199553660663557603}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +415,7 @@ Transform:
   m_GameObject: {fileID: 199553661156142032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 199553659913409994}
   - {fileID: 199553660181735684}
@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 199553661181553048}
   - component: {fileID: 199553661181553049}
   - component: {fileID: 199553661181553050}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 7216807873310362162}
   - component: {fileID: 3808836545637256647}
   - component: {fileID: 2324229000324216406}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
