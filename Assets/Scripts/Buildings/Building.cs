@@ -32,4 +32,20 @@ public class Building : Tile
 
         return true;
     }
+
+    public bool HasRoadAccess()
+    {
+        Tile[] neighbors = TileMap.singleton.Neighbors(this.coords);
+        for (int i = 0; i < neighbors.Length; i++)
+        {
+
+            if(neighbors[i] != null && neighbors[i].gameObject.layer == LayerMask.NameToLayer("Road"))
+            {
+                return true;
+            }
+        }
+        
+
+        return false;
+    }
 }

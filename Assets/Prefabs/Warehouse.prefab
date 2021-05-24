@@ -1,20 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4282412916235007375
+--- !u!114 &4924611943280292604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
+  m_GameObject: {fileID: 6620973250412339071}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   goods: []
-  allowedGoods: []
-  maxCapacity: 0
+  allowedGoods:
+  - {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
+  - {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+  requestedGoods: []
+  emptyingGoods: []
+  maxCapacity: 25
   numTransports: 0
   TransportPrefab: {fileID: 0}
   OnEmpty:
@@ -29,66 +33,7 @@ MonoBehaviour:
   OnWithdraw:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &989090655493557256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goods: []
-  allowedGoods: []
-  maxCapacity: 0
-  numTransports: 0
-  TransportPrefab: {fileID: 0}
-  OnEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeposit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWithdraw:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5915468217314147645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c081ce6408fffaf488af5fcce77f728b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outputInventory: {fileID: 989090655493557256}
-  inputInventory: {fileID: -4282412916235007375}
-  productionRecipe: {fileID: 0}
-  OnOutputFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStartProduce:
-    m_PersistentCalls:
-      m_Calls: []
-  OnEndProduce:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInputEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnOutput:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1001 &6336317614834042302
+--- !u!1001 &5792636910292387489
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -96,8 +41,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: m_Name
-      value: ProductionBuilding
+      value: Warehouse
       objectReference: {fileID: 0}
     - target: {fileID: 2298181384242665294, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: m_RootOrder
@@ -143,10 +92,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: constraints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: constraints.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 80e79fdbdf1c98b429e2491bd1e9bd02, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
---- !u!1 &6660515776996334688 stripped
+--- !u!1 &6620973250412339071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
-  m_PrefabInstance: {fileID: 6336317614834042302}
+  m_PrefabInstance: {fileID: 5792636910292387489}
   m_PrefabAsset: {fileID: 0}

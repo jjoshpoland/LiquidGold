@@ -3,19 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Inventory))]
 public class Resource : MonoBehaviour
 {
-    public Inventory inventory;
+    public Good type;
+    public List<Good> goods;
+    public int maxCapacity;
 
     public UnityEvent OnThreeQuarterFull;
     public UnityEvent OnHalfFull;
     public UnityEvent OnQuarterFull;
     public UnityEvent OnEmpty;
 
+    public void Start()
+    {
+        for (int i = 0; i < maxCapacity; i++)
+        {
+            goods.Add(type);
+        }
+    }
+
     public void CheckRemainingResources()
     {
-        float remainingPercent = inventory.goods.Count / inventory.maxCapacity;
+        float remainingPercent = goods.Count / maxCapacity;
 
         if(remainingPercent >= .75f)
         {

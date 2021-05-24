@@ -1,12 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4282412916235007375
+--- !u!114 &1108671760940509237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
+  m_GameObject: {fileID: 3258259659546702386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8ae318bb717090428f29f3bf857e8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 4
+  coords: {x: 0, y: 0}
+  ghostPrefab: {fileID: 7432911573527161021, guid: 4499342ccad906d4abac918433c8041d, type: 3}
+  constraints: []
+  Target: {fileID: 0}
+  harvestTime: 5
+  range: 15
+  OnHarvest:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1566439820288619321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258259659546702386}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
@@ -14,9 +36,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goods: []
   allowedGoods: []
-  maxCapacity: 0
-  numTransports: 0
-  TransportPrefab: {fileID: 0}
+  requestedGoods: []
+  emptyingGoods: []
+  maxCapacity: 10
+  numTransports: 1
+  TransportPrefab: {fileID: 2717032930372108092, guid: d692691aeb647cc4c90d04efc5932923, type: 3}
   OnEmpty:
     m_PersistentCalls:
       m_Calls: []
@@ -29,66 +53,7 @@ MonoBehaviour:
   OnWithdraw:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &989090655493557256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goods: []
-  allowedGoods: []
-  maxCapacity: 0
-  numTransports: 0
-  TransportPrefab: {fileID: 0}
-  OnEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeposit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWithdraw:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &5915468217314147645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c081ce6408fffaf488af5fcce77f728b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outputInventory: {fileID: 989090655493557256}
-  inputInventory: {fileID: -4282412916235007375}
-  productionRecipe: {fileID: 0}
-  OnOutputFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnStartProduce:
-    m_PersistentCalls:
-      m_Calls: []
-  OnEndProduce:
-    m_PersistentCalls:
-      m_Calls: []
-  OnInputEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnOutput:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!1001 &6336317614834042302
+--- !u!1001 &2789506519840828396
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -97,7 +62,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: m_Name
-      value: ProductionBuilding
+      value: Harvester
       objectReference: {fileID: 0}
     - target: {fileID: 2298181384242665294, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: m_RootOrder
@@ -143,10 +108,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
---- !u!1 &6660515776996334688 stripped
+--- !u!1 &3258259659546702386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
-  m_PrefabInstance: {fileID: 6336317614834042302}
+  m_PrefabInstance: {fileID: 2789506519840828396}
   m_PrefabAsset: {fileID: 0}

@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.AI;
 
 public class Inventory : MonoBehaviour
 {
     public List<Good> goods;
+
+    //these are filtering lists
     public List<Good> allowedGoods;
+    public List<Good> requestedGoods;
+    public List<Good> emptyingGoods;
+    //end list
+
     public int maxCapacity;
+    public int numTransports;
+    public GameObject TransportPrefab;
 
     public UnityEvent OnEmpty;
     public UnityEvent OnFull;
@@ -21,10 +30,25 @@ public class Inventory : MonoBehaviour
             return maxCapacity - goods.Count;
         }
     }
+    private void Awake()
+    {
+        GlobalInventory.singleton.inventories.Add(this);
+    }
     // Start is called before the first frame update
     void Start()
     {
+        for (int i = 0; i < numTransports; i++)
+        {
+            GameObject t = Instantiate(TransportPrefab, transform);
+            t.transform.parent = null;
+        }
         
+        
+    }
+
+    private void OnDestroy()
+    {
+        GlobalInventory.singleton.inventories.Remove(this);
     }
 
     // Update is called once per frame
@@ -35,7 +59,7 @@ public class Inventory : MonoBehaviour
 
     public bool Deposit(Good good)
     {
-        if(remainingCapacity > 0 && allowedGoods.Contains(good))
+        if(remainingCapacity > 0)
         {
             goods.Add(good);
             OnDeposit.Invoke();

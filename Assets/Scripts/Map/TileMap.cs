@@ -195,6 +195,7 @@ public class TileMap : MonoBehaviour
             newTileInstance.coords = oldTile.coords;
             tiles[coords.x, coords.y] = newTileInstance;
             Destroy(oldTile.gameObject);
+            
             OnTileReplacement.Invoke();
             return true;
         }

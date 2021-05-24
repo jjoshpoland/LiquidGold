@@ -397,7 +397,6 @@ GameObject:
   - component: {fileID: 199553661156142038}
   - component: {fileID: 199553661156142039}
   - component: {fileID: 1180959685235510242}
-  - component: {fileID: 643194216128954565}
   - component: {fileID: 2966289620697871509}
   m_Layer: 0
   m_Name: WhiteForest
@@ -503,33 +502,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   coords: {x: 0, y: 0}
---- !u!114 &643194216128954565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 199553661156142032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goods: []
-  allowedGoods: []
-  maxCapacity: 0
-  OnEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeposit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWithdraw:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2966289620697871509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -542,7 +514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c8a44c01975da4bb7fc023572c30b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 0}
+  type: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+  goods: []
+  maxCapacity: 100
   OnThreeQuarterFull:
     m_PersistentCalls:
       m_Calls:

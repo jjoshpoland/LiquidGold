@@ -30,6 +30,7 @@ public class Producer : MonoBehaviour
                 foreach(Good input in productionRecipe.inputs)
                 {
                     inputInventory.allowedGoods.Add(input);
+                    inputInventory.requestedGoods.Add(input);
                 }
 
                 inputInventory.maxCapacity = productionRecipe.inputs.Count * 10;
@@ -37,7 +38,7 @@ public class Producer : MonoBehaviour
 
             foreach(Good output in productionRecipe.outputs)
             {
-                outputInventory.allowedGoods.Add(output);
+                //outputInventory.allowedGoods.Add(output);
             }
 
             outputInventory.maxCapacity = productionRecipe.outputs.Count * 10;
