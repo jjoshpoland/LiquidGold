@@ -8,6 +8,7 @@ public class Resource : MonoBehaviour
     public Good type;
     public List<Good> goods;
     public int maxCapacity;
+    
 
     public UnityEvent OnThreeQuarterFull;
     public UnityEvent OnHalfFull;
@@ -20,11 +21,13 @@ public class Resource : MonoBehaviour
         {
             goods.Add(type);
         }
+
+        
     }
 
     public void CheckRemainingResources()
     {
-        float remainingPercent = goods.Count / maxCapacity;
+        float remainingPercent =  (float)goods.Count / (float)maxCapacity;
 
         if(remainingPercent >= .75f)
         {
@@ -45,6 +48,7 @@ public class Resource : MonoBehaviour
         else
         {
             OnEmpty.Invoke();
+            TileMap.singleton.ReplaceTile(GetComponent<Tile>().coords, TileMap.singleton.grassPrefab);
         }
     }
 }

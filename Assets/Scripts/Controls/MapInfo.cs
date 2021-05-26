@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class MapInfo : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class MapInfo : MonoBehaviour
 
         Ray cursorRay = Camera.main.ScreenPointToRay(mousePos);
         
-        if (Physics.Raycast(cursorRay, out RaycastHit hitinfo, float.MaxValue, mouseInteractions))
+        if (Physics.Raycast(cursorRay, out RaycastHit hitinfo, float.MaxValue, mouseInteractions) && !EventSystem.current.IsPointerOverGameObject())
         {
             if (hitinfo.collider.TryGetComponent<Tile>(out Tile tile))
             {

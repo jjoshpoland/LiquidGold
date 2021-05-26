@@ -102,6 +102,7 @@ public class Harvester : Building
         {
             if(closestResource.goods.Remove(Target) && inventory.Deposit(Target))
             {
+                closestResource.CheckRemainingResources();
                 return true;
             }
         }

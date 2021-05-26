@@ -1,34 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4282412916235007375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6660515776996334688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goods: []
-  allowedGoods: []
-  maxCapacity: 0
-  numTransports: 0
-  TransportPrefab: {fileID: 0}
-  OnEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFull:
-    m_PersistentCalls:
-      m_Calls: []
-  OnDeposit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnWithdraw:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &989090655493557256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goods: []
   allowedGoods: []
-  maxCapacity: 0
-  numTransports: 0
-  TransportPrefab: {fileID: 0}
+  requestedGoods: []
+  emptyingGoods: []
+  maxCapacity: 16
+  numTransports: 1
+  TransportPrefab: {fileID: 2717032930372108092, guid: d692691aeb647cc4c90d04efc5932923, type: 3}
   OnEmpty:
     m_PersistentCalls:
       m_Calls: []
@@ -71,7 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outputInventory: {fileID: 989090655493557256}
-  inputInventory: {fileID: -4282412916235007375}
   productionRecipe: {fileID: 0}
   OnOutputFull:
     m_PersistentCalls:

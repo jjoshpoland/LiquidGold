@@ -16,6 +16,11 @@ MonoBehaviour:
   allowedGoods:
   - {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
   - {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+  - {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
+  - {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
+  - {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
+  - {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
+  - {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
   requestedGoods: []
   emptyingGoods: []
   maxCapacity: 25

@@ -55,6 +55,7 @@ public class Transport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        agent.isStopped = false;
         if(destination == null)
         {
             agent.isStopped = true;
@@ -84,26 +85,9 @@ public class Transport : MonoBehaviour
         {
             if(targetGood == null)
             {
-                Inventory[] homeInventories = home.GetComponents<Inventory>();
+
                 //try to find goods that the home is emptying
-                for (int j = 0; j < homeInventories.Length; j++)
-                {
-                    for (int i = 0; i < homeInventories[j].emptyingGoods.Count; i++)
-                    {
-                        //does this inventory contain any goods on its own emptying list?
-                        if(homeInventories[j].goods.Contains(homeInventories[j].emptyingGoods[i]))
-                        {
-                            targetGood = homeInventories[j].emptyingGoods[i];
-                            destination = homeInventories[j];
-                        }
-                        
-                        //destination = FindAvailableProvider();
-                        if (destination != null)
-                        {
-                            break;
-                        }
-                    }
-                }
+                CheckHomeForPickups();
 
                 if(destination != null)
                 {
@@ -111,19 +95,8 @@ public class Transport : MonoBehaviour
                 }
 
                 //try to find goods that the home is requesting
-
-                for (int j = 0; j < homeInventories.Length; j++)
-                {
-                    for (int i = 0; i < homeInventories[j].requestedGoods.Count; i++)
-                    {
-                        targetGood = homeInventories[j].requestedGoods[i];
-                        destination = FindAvailableProvider();
-                        if (destination != null)
-                        {
-                            break;
-                        }
-                    }
-                }
+                CheckEverywhereForHomeGoods();
+                
                 
             }
             else
@@ -139,7 +112,12 @@ public class Transport : MonoBehaviour
         }
         else
         {
-            destination = FindAvailableReciever();
+            //if home doesn't need my shit, then look for anyone who does
+            if(!CheckIfHomeNeedsMyGoods())
+            {
+                destination = FindAvailableReciever();
+            }
+            
             if(destination == null)
             {
                 //could not find a valid reciever for goods
@@ -149,6 +127,7 @@ public class Transport : MonoBehaviour
 
     void Interact()
     {
+        agent.isStopped = false;
         if(DistanceCheck())
         {
             if(IsEmpty && targetGood != null)
@@ -184,10 +163,11 @@ public class Transport : MonoBehaviour
                 
             }
         }
-        //else
-        //{
-        //    Debug.Log(name + "is out of range of its target inventory");
-        //}
+        else
+        {
+            agent.SetDestination(destination.transform.position);
+            agent.isStopped = false;
+        }
     }
 
     bool DistanceCheck()
@@ -277,7 +257,7 @@ public class Transport : MonoBehaviour
         {
             //if this inventory doesnt have the goods targeted, skip
             if (!inv.goods.Contains(targetGood)) continue;
-            
+            if (inv.gameObject == home) continue;
 
             //find the distance and if its closer than the nearest stored inv, make this the nearest inv
             float distance = Vector3.Distance(transform.position, inv.transform.position);
@@ -289,5 +269,67 @@ public class Transport : MonoBehaviour
         }
 
         return closestInv;
+    }
+
+    void CheckHomeForPickups()
+    {
+        Inventory[] homeInventories = home.GetComponents<Inventory>();
+        for (int j = 0; j < homeInventories.Length; j++)
+        {
+            for (int i = 0; i < homeInventories[j].emptyingGoods.Count; i++)
+            {
+                //does this inventory contain any goods on its own emptying list?
+                if (homeInventories[j].goods.Contains(homeInventories[j].emptyingGoods[i]))
+                {
+                    targetGood = homeInventories[j].emptyingGoods[i];
+                    destination = homeInventories[j];
+                }
+
+                //destination = FindAvailableProvider();
+                if (destination != null)
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    void CheckEverywhereForHomeGoods()
+    {
+        Inventory[] homeInventories = home.GetComponents<Inventory>();
+        for (int j = 0; j < homeInventories.Length; j++)
+        {
+            for (int i = 0; i < homeInventories[j].requestedGoods.Count; i++)
+            {
+                targetGood = homeInventories[j].requestedGoods[i];
+                destination = FindAvailableProvider();
+                if (destination != null)
+                {
+                    break;
+                }
+            }
+        }
+    }
+
+    bool CheckIfHomeNeedsMyGoods()
+    {
+        Inventory[] homeInventories = home.GetComponents<Inventory>();
+        for (int j = 0; j < homeInventories.Length; j++)
+        {
+            //is this inventory requesting my current goods?
+            if (homeInventories[j].requestedGoods.Contains(CurrentGoods))
+            {
+                destination = homeInventories[j];
+            }
+
+            if (destination != null)
+            {
+                Debug.Log(name + " needs to bring " + CurrentGoods + " home");
+                return true;
+            }
+            
+        }
+
+        return false;
     }
 }

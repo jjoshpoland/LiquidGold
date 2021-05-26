@@ -46,6 +46,18 @@ public class Inventory : MonoBehaviour
         
     }
 
+    public void Init()
+    {
+        goods = new List<Good>();
+        allowedGoods = new List<Good>();
+        requestedGoods = new List<Good>();
+        emptyingGoods = new List<Good>();
+        OnEmpty = new UnityEvent();
+        OnFull = new UnityEvent();
+        OnDeposit = new UnityEvent();
+        OnWithdraw = new UnityEvent();
+    }
+
     private void OnDestroy()
     {
         GlobalInventory.singleton.inventories.Remove(this);

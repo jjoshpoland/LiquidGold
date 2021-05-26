@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Producer : MonoBehaviour
 {
     public Inventory outputInventory;
-    public Inventory inputInventory;
+    List<Inventory> inputs;
     public Recipe productionRecipe;
 
     float progress;
@@ -23,22 +23,32 @@ public class Producer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        inputs = new List<Inventory>();
         if(productionRecipe != null)
         {
-            if(inputInventory != null)
+            foreach (Good input in productionRecipe.inputs)
             {
-                foreach(Good input in productionRecipe.inputs)
+                bool alreadyCounted = false;
+                foreach (Inventory inputInv in inputs)
                 {
-                    inputInventory.allowedGoods.Add(input);
-                    inputInventory.requestedGoods.Add(input);
+                    if (inputInv.allowedGoods.Contains(input))
+                    {
+                        inputInv.maxCapacity += Mathf.RoundToInt(productionRecipe.time);
+                        alreadyCounted = true;
+                    }
                 }
+                if (alreadyCounted) continue;
 
-                inputInventory.maxCapacity = productionRecipe.inputs.Count * 10;
+                Inventory newInput = gameObject.AddComponent<Inventory>();
+                newInput.Init();
+                newInput.allowedGoods.Add(input);
+                newInput.requestedGoods.Add(input);
+                newInput.maxCapacity += Mathf.RoundToInt(productionRecipe.time);
+                inputs.Add(newInput);
             }
-
-            foreach(Good output in productionRecipe.outputs)
+            foreach (Good output in productionRecipe.outputs)
             {
-                //outputInventory.allowedGoods.Add(output);
+                outputInventory.emptyingGoods.Add(output);
             }
 
             outputInventory.maxCapacity = productionRecipe.outputs.Count * 10;
@@ -90,13 +100,17 @@ public class Producer : MonoBehaviour
 
         if(productionRecipe.inputs.Count > 0)
         {
-            if (inputInventory == null) return false;
+            if (inputs.Count == 0) return false;
 
-            if (!inputInventory.CheckRecipe(productionRecipe))
+            foreach(Inventory input in inputs)
             {
-                OnInputEmpty.Invoke();
-                return false;
+                if (!input.CheckRecipe(productionRecipe))
+                {
+                    OnInputEmpty.Invoke();
+                    return false;
+                }
             }
+            
         }
 
         return true;

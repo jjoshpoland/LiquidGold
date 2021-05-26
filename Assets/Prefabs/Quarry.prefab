@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4024377696593925396
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: maxCapacity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: numTransports
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: TransportPrefab
+      value: 
+      objectReference: {fileID: 2717032930372108092, guid: d692691aeb647cc4c90d04efc5932923, type: 3}
+    - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: constraints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: constraints.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 74beca08cbffde44cba37a74a2664454, type: 2}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5191481066670052080, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915468217314147645, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: inputInventory
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5915468217314147645, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: productionRecipe
+      value: 
+      objectReference: {fileID: 11400000, guid: e8f96c98785a56c4fadca509827a40f7, type: 2}
+    - target: {fileID: 6660515776996334688, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: m_Name
+      value: Quarry
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -4282412916235007375, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
