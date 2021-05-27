@@ -20,8 +20,8 @@ public class Inventory : MonoBehaviour
 
     public UnityEvent OnEmpty;
     public UnityEvent OnFull;
-    public UnityEvent OnDeposit;
-    public UnityEvent OnWithdraw;
+    public UnityEvent<Good> OnDeposit;
+    public UnityEvent<Good> OnWithdraw;
 
     public int remainingCapacity
     {
@@ -32,11 +32,12 @@ public class Inventory : MonoBehaviour
     }
     private void Awake()
     {
-        GlobalInventory.singleton.inventories.Add(this);
+        
     }
     // Start is called before the first frame update
     void Start()
     {
+        GlobalInventory.singleton.Add(this);
         for (int i = 0; i < numTransports; i++)
         {
             GameObject t = Instantiate(TransportPrefab, transform);
@@ -54,13 +55,14 @@ public class Inventory : MonoBehaviour
         emptyingGoods = new List<Good>();
         OnEmpty = new UnityEvent();
         OnFull = new UnityEvent();
-        OnDeposit = new UnityEvent();
-        OnWithdraw = new UnityEvent();
+        OnDeposit = new UnityEvent<Good>();
+        OnWithdraw = new UnityEvent<Good>();
+        enabled = true;
     }
 
     private void OnDestroy()
     {
-        GlobalInventory.singleton.inventories.Remove(this);
+        GlobalInventory.singleton.Remove(this);
     }
 
     // Update is called once per frame
@@ -74,7 +76,7 @@ public class Inventory : MonoBehaviour
         if(remainingCapacity > 0)
         {
             goods.Add(good);
-            OnDeposit.Invoke();
+            OnDeposit.Invoke(good);
             if(remainingCapacity == 0)
             {
                 OnFull.Invoke();
@@ -92,7 +94,7 @@ public class Inventory : MonoBehaviour
         if(goods.Contains(good))
         {
             goods.Remove(good);
-            OnWithdraw.Invoke();
+            OnWithdraw.Invoke(good);
             if(goods.Count == 0)
             {
                 OnEmpty.Invoke();
@@ -105,32 +107,18 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Checks if this inventory can provide all needed ingredients for a given recipe
-    /// </summary>
-    /// <param name="recipe"></param>
-    /// <returns></returns>
-    public bool CheckRecipe(Recipe recipe)
+    public int CheckGoods(Good good)
     {
-        //keep track of what has been pulled out of the inventory
-        List<Good> pulledInputs = new List<Good>();
-        foreach (Good input in recipe.inputs)
+        int count = 0;
+
+        foreach(Good storedGood in goods)
         {
-            //check if the inventory cannot pull the good. if it can, just add it to the pulled inputs. if it cannot, add all pulled inputs back into the inventory and return false.
-            if (!GetGood(input))
+            if(storedGood == good)
             {
-                foreach (Good pulledInput in pulledInputs)
-                {
-                    goods.Add(pulledInput);
-                }
-                return false;
-            }
-            else
-            {
-                pulledInputs.Add(input);
+                count++;
             }
         }
 
-        return true;
+        return count;
     }
 }

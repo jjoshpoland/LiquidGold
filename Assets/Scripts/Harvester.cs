@@ -26,6 +26,7 @@ public class Harvester : Building
     {
         inventory = GetComponent<Inventory>();
         FindResourcesInRange();
+        lastHarvest = Time.time;
     }
 
     // Update is called once per frame

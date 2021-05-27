@@ -6,6 +6,7 @@ public class Building : Tile
 {
     public GameObject ghostPrefab;
     public List<StructurePlacementConstraint> constraints;
+    public List<GoodQuantity> cost;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,4 +49,11 @@ public class Building : Tile
 
         return false;
     }
+}
+
+[System.Serializable]
+public class GoodQuantity
+{
+    public Good good;
+    public int quantity;
 }

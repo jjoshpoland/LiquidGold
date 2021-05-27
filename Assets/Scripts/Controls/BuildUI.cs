@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class BuildUI : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BuildUI : MonoBehaviour
     public Building currentBuilding;
     GameObject buildingGhost;
     PlayerInput input;
+
+    public UnityEvent OnNotEnoughResources;
     
     // Start is called before the first frame update
     void Start()
@@ -54,8 +57,15 @@ public class BuildUI : MonoBehaviour
             && currentBuilding != null 
             && currentTile != null 
             && currentTile.type != TileType.Structure 
-            && currentBuilding.EvaluateConstraints(currentTile))
+            && currentBuilding.EvaluateConstraints(currentTile)
+            )
         {
+            if(!GlobalInventory.singleton.PullGoods(currentBuilding.cost))
+            {
+                OnNotEnoughResources.Invoke();
+                GlobalInventory.singleton.Drachmae = GlobalInventory.singleton.Drachmae - Market.singleton.PlaceOrder(currentBuilding.cost);
+            }
+            
             //Debug.Log("replacing " + currentTile + " @ " + currentTile.coords);
             if(TileMap.singleton.ReplaceTile(currentTile.coords, currentBuilding))
             {

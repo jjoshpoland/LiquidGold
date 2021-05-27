@@ -111,6 +111,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1798188102736278912, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2298181384242665294, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -160,9 +164,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8293696376541611426, guid: 06073a7bcb6e543459b7e496acd862f3, type: 3}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: cost.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: constraints.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: cost.Array.data[0].good
+      value: 
+      objectReference: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: cost.Array.data[1].good
+      value: 
+      objectReference: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: constraints.Array.data[0]
       value: 
@@ -171,6 +187,14 @@ PrefabInstance:
       propertyPath: constraints.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: f2e030c33a527d9468e754e82c9a680f, type: 2}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: cost.Array.data[0].quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: cost.Array.data[1].quantity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4733886351950478676, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}

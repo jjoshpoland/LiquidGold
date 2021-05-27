@@ -8,6 +8,7 @@ public class Producer : MonoBehaviour
 {
     public Inventory outputInventory;
     List<Inventory> inputs;
+    List<Good> processingGoods;
     public Recipe productionRecipe;
 
     float progress;
@@ -17,7 +18,7 @@ public class Producer : MonoBehaviour
     public UnityEvent OnOutputFull;
     public UnityEvent OnStartProduce;
     public UnityEvent OnEndProduce;
-    public UnityEvent OnInputEmpty;
+    public UnityEvent<bool> OnInputStatusCheck;
     public UnityEvent<Good> OnOutput;
 
     // Start is called before the first frame update
@@ -26,8 +27,12 @@ public class Producer : MonoBehaviour
         inputs = new List<Inventory>();
         if(productionRecipe != null)
         {
+            processingGoods = new List<Good>(productionRecipe.inputs.Count);
+            
+            
             foreach (Good input in productionRecipe.inputs)
             {
+                processingGoods.Add(null);
                 bool alreadyCounted = false;
                 foreach (Inventory inputInv in inputs)
                 {
@@ -41,6 +46,7 @@ public class Producer : MonoBehaviour
 
                 Inventory newInput = gameObject.AddComponent<Inventory>();
                 newInput.Init();
+                newInput.enabled = true;
                 newInput.allowedGoods.Add(input);
                 newInput.requestedGoods.Add(input);
                 newInput.maxCapacity += Mathf.RoundToInt(productionRecipe.time);
@@ -104,15 +110,38 @@ public class Producer : MonoBehaviour
 
             foreach(Inventory input in inputs)
             {
-                if (!input.CheckRecipe(productionRecipe))
+                //go through the production recipe
+                for (int i = 0; i < productionRecipe.inputs.Count; i++)
                 {
-                    OnInputEmpty.Invoke();
-                    return false;
+                    //if the processing goods doesn't already contain this input, then try to get it
+                    if(processingGoods[i] != productionRecipe.inputs[i])
+                    {
+                        //if the input can be retrieved from the current inventory, add it to the processing goods list at the same position
+                        if(input.GetGood(productionRecipe.inputs[i]))
+                        {
+                            processingGoods[i] = productionRecipe.inputs[i];
+                        }
+                    }
                 }
             }
+
+            //validate the entire processing list against the recipe list
+            bool canProduce = true;
+            for (int i = 0; i < productionRecipe.inputs.Count; i++)
+            {
+                if(processingGoods[i] != productionRecipe.inputs[i])
+                {
+                    canProduce = false;
+                    break;
+                }
+            }
+
             
+            OnInputStatusCheck.Invoke(!canProduce);
+            return canProduce;
         }
 
+        OnInputStatusCheck.Invoke(false);
         return true;
     }
 
