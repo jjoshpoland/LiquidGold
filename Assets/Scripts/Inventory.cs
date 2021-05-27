@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class Inventory : MonoBehaviour
 {
+    public bool AIOnly;
     public List<Good> goods;
 
     //these are filtering lists
@@ -37,7 +38,11 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GlobalInventory.singleton.Add(this);
+        if(!AIOnly)
+        {
+            GlobalInventory.singleton.Add(this);
+        }
+        
         for (int i = 0; i < numTransports; i++)
         {
             GameObject t = Instantiate(TransportPrefab, transform);

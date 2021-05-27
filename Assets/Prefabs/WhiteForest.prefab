@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
   goods: []
-  maxCapacity: 10
+  maxCapacity: 5
   OnThreeQuarterFull:
     m_PersistentCalls:
       m_Calls:

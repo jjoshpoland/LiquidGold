@@ -56,4 +56,10 @@ public class GoodQuantity
 {
     public Good good;
     public int quantity;
+
+    public GoodQuantity(Good good, int quantity)
+    {
+        this.good = good;
+        this.quantity = quantity;
+    }
 }

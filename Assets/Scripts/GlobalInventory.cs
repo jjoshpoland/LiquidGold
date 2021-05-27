@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GlobalInventory : MonoBehaviour
 {
+    public bool isSingleton;
     public static GlobalInventory singleton;
     public List<Inventory> inventories;
     public UnityEvent OnGoodsUpdated;
@@ -30,7 +31,11 @@ public class GlobalInventory : MonoBehaviour
     private void Awake()
     {
         quantities = new Dictionary<Good, int>();
-        singleton = this;
+        if(isSingleton)
+        {
+            singleton = this;
+        }
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -150,5 +155,94 @@ public class GlobalInventory : MonoBehaviour
 
 
         return true;
+    }
+
+    public bool PullGoods(GoodQuantity goods)
+    {
+        if (goods == null) return true;
+        if (GetQuantity(goods.good) < goods.quantity) return false;
+
+
+        Dictionary<Good, int> pulled = new Dictionary<Good, int>();
+        Good good = goods.good;
+        pulled.Add(good, 0);
+
+        foreach (Inventory inventory in inventories)
+        {
+            //try to pull the amount needed until no more is left or the amount needed has been pulled, then break and move on to next inventory
+            for (int i = 0; i < goods.quantity; i++)
+            {
+                if (inventory.GetGood(good))
+                {
+                    pulled[good] = pulled[good] + 1;
+                    if (pulled[good] == goods.quantity)
+                    {
+                        break;
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            //if enough 
+            if (pulled[good] == goods.quantity)
+            {
+                break;
+            }
+        }
+
+        return true;
+    }
+
+    public bool AddGoods(GoodQuantity goods)
+    {
+        int capacity = 0;
+        int deposited = 0;
+
+        foreach(Inventory inv in inventories)
+        {
+            if(inv.allowedGoods.Contains(goods.good) || inv.requestedGoods.Contains(goods.good))
+            {
+                if(inv.remainingCapacity > 0)
+                {
+                    capacity += inv.remainingCapacity;
+                }
+                if(capacity >= goods.quantity)
+                {
+                    break;
+                }
+            }
+        }
+
+        if(capacity >= goods.quantity)
+        {
+            foreach(Inventory inv in inventories)
+            {
+                if(inv.allowedGoods.Contains(goods.good) || inv.requestedGoods.Contains(goods.good))
+                {
+                    for (int i = 0; i < goods.quantity; i++)
+                    {
+                        if (inv.Deposit(goods.good))
+                        {
+                            deposited++;
+                            if (deposited == goods.quantity)
+                            {
+                                return true;
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+
+        return false;
     }
 }

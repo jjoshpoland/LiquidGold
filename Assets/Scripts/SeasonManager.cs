@@ -6,12 +6,21 @@ using UnityEngine.Events;
 public class SeasonManager : MonoBehaviour
 {
     public float SeasonDuration = 240f;
+    int currentSeason = -1;
     public UnityEvent OnSeasonEnd;
     public UnityEvent OnSeasonStart;
     public UnityEvent<float> OnSeasonProgress;
     public static SeasonManager singleton;
     float seasonStart;
     bool seasonActive;
+
+    public int CurrentSeason
+    {
+        get
+        {
+            return currentSeason;
+        }
+    }
 
     private void Awake()
     {
@@ -39,6 +48,7 @@ public class SeasonManager : MonoBehaviour
 
     public void StartNewSeason()
     {
+        currentSeason++;
         seasonActive = true;
         seasonStart = Time.time;
         OnSeasonStart.Invoke();

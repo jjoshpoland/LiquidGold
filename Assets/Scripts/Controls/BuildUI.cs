@@ -63,7 +63,7 @@ public class BuildUI : MonoBehaviour
             if(!GlobalInventory.singleton.PullGoods(currentBuilding.cost))
             {
                 OnNotEnoughResources.Invoke();
-                GlobalInventory.singleton.Drachmae = GlobalInventory.singleton.Drachmae - Market.singleton.PlaceOrder(currentBuilding.cost);
+                GlobalInventory.singleton.Drachmae = GlobalInventory.singleton.Drachmae - Market.singleton.PlaceOrder(currentBuilding.cost, Player.mainPlayer);
             }
             
             //Debug.Log("replacing " + currentTile + " @ " + currentTile.coords);
