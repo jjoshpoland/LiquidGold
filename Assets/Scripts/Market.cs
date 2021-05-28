@@ -35,6 +35,18 @@ public class Market : MonoBehaviour
         
     }
 
+    public int GetPrice(Good good)
+    {
+        if(priceMap.TryGetValue(good, out int value))
+        {
+            return value;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     public void UpdateMarket(List<GoodQuantity> newPrices)
     {
         foreach(GoodQuantity price in newPrices)

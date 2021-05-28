@@ -4716,6 +4716,7 @@ GameObject:
   - component: {fileID: 250518347}
   - component: {fileID: 250518350}
   - component: {fileID: 250518349}
+  - component: {fileID: 250518351}
   m_Layer: 0
   m_Name: AIPlayer
   m_TagString: Untagged
@@ -4779,10 +4780,34 @@ MonoBehaviour:
       m_Calls: []
   OnDeposit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250518350}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: AddGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnWithdraw:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 250518350}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: RemoveGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &250518350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4806,6 +4831,33 @@ MonoBehaviour:
   OnDrachmaeUpdated_Label:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &250518351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250518346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feca0351b0a719a4a8eb2abaab97048e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+  Drachmae: 0
+  globalInventory: {fileID: 0}
+  mainInventory: {fileID: 0}
+  player: {fileID: 0}
+  targetGood: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
+  decisionTime: 2
+  actions:
+  - {fileID: 11400000, guid: 56ee2a85dd258654b8fb016e03d56b98, type: 2}
+  - {fileID: 11400000, guid: 09a514a65afacda42bb1a130256dfcf9, type: 2}
+  - {fileID: 11400000, guid: 737becf95b3a4064898db7b6334b4915, type: 2}
+  - {fileID: 11400000, guid: 4d8ae48282595374ea678406f05c34e6, type: 2}
+  - {fileID: 11400000, guid: 15e317f72dcae484bac274609a941eb1, type: 2}
+  - {fileID: 11400000, guid: 9cd2cc6bf9618324ca04ebd168e9d08f, type: 2}
+  - {fileID: 11400000, guid: 35e8482e24ef2db41a7a394adc162f7d, type: 2}
 --- !u!1 &255825800
 GameObject:
   m_ObjectHideFlags: 0
@@ -13689,6 +13741,7 @@ GameObject:
   - component: {fileID: 713721643}
   - component: {fileID: 713721646}
   - component: {fileID: 713721645}
+  - component: {fileID: 713721647}
   m_Layer: 0
   m_Name: AIPlayer (2)
   m_TagString: Untagged
@@ -13752,10 +13805,34 @@ MonoBehaviour:
       m_Calls: []
   OnDeposit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 713721646}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: AddGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnWithdraw:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 713721646}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: RemoveGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &713721646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13779,6 +13856,33 @@ MonoBehaviour:
   OnDrachmaeUpdated_Label:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &713721647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713721642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feca0351b0a719a4a8eb2abaab97048e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+  Drachmae: 0
+  globalInventory: {fileID: 0}
+  mainInventory: {fileID: 0}
+  player: {fileID: 0}
+  targetGood: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+  decisionTime: 2
+  actions:
+  - {fileID: 11400000, guid: 56ee2a85dd258654b8fb016e03d56b98, type: 2}
+  - {fileID: 11400000, guid: 09a514a65afacda42bb1a130256dfcf9, type: 2}
+  - {fileID: 11400000, guid: 737becf95b3a4064898db7b6334b4915, type: 2}
+  - {fileID: 11400000, guid: 4d8ae48282595374ea678406f05c34e6, type: 2}
+  - {fileID: 11400000, guid: 15e317f72dcae484bac274609a941eb1, type: 2}
+  - {fileID: 11400000, guid: 9cd2cc6bf9618324ca04ebd168e9d08f, type: 2}
+  - {fileID: 11400000, guid: 35e8482e24ef2db41a7a394adc162f7d, type: 2}
 --- !u!1 &722389676
 GameObject:
   m_ObjectHideFlags: 0
@@ -20059,7 +20163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9490d35f97ddc4cace489134aea8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SeasonDuration: 10
+  SeasonDuration: 30
   OnSeasonEnd:
     m_PersistentCalls:
       m_Calls:
@@ -32791,6 +32895,7 @@ GameObject:
   - component: {fileID: 2116820308}
   - component: {fileID: 2116820311}
   - component: {fileID: 2116820310}
+  - component: {fileID: 2116820312}
   m_Layer: 0
   m_Name: AIPlayer (1)
   m_TagString: Untagged
@@ -32854,10 +32959,34 @@ MonoBehaviour:
       m_Calls: []
   OnDeposit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2116820311}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: AddGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnWithdraw:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2116820311}
+        m_TargetAssemblyTypeName: GlobalInventory, Assembly-CSharp
+        m_MethodName: RemoveGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2116820311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32881,6 +33010,33 @@ MonoBehaviour:
   OnDrachmaeUpdated_Label:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2116820312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116820307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feca0351b0a719a4a8eb2abaab97048e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+  Drachmae: 0
+  globalInventory: {fileID: 0}
+  mainInventory: {fileID: 0}
+  player: {fileID: 0}
+  targetGood: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
+  decisionTime: 2
+  actions:
+  - {fileID: 11400000, guid: 56ee2a85dd258654b8fb016e03d56b98, type: 2}
+  - {fileID: 11400000, guid: 09a514a65afacda42bb1a130256dfcf9, type: 2}
+  - {fileID: 11400000, guid: 737becf95b3a4064898db7b6334b4915, type: 2}
+  - {fileID: 11400000, guid: 4d8ae48282595374ea678406f05c34e6, type: 2}
+  - {fileID: 11400000, guid: 15e317f72dcae484bac274609a941eb1, type: 2}
+  - {fileID: 11400000, guid: 9cd2cc6bf9618324ca04ebd168e9d08f, type: 2}
+  - {fileID: 11400000, guid: 35e8482e24ef2db41a7a394adc162f7d, type: 2}
 --- !u!1 &2133247414
 GameObject:
   m_ObjectHideFlags: 0

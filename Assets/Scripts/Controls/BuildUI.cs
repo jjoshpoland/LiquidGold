@@ -75,10 +75,6 @@ public class BuildUI : MonoBehaviour
                 //fire on placed building event
             }
         }
-        else
-        {
-            Debug.Log("cannot place " + currentBuilding + " on " + currentTile);
-        }
     }
     #region InputEvents
     void OnSelect()

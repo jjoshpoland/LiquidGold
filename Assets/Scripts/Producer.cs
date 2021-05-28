@@ -72,6 +72,7 @@ public class Producer : MonoBehaviour
         {
             if(CheckInputs())
             {
+                ClearProcessingGoods();
                 OnStartProduce.Invoke();
                 cycleStartTime = Time.time;
                 producing = true;
@@ -97,6 +98,14 @@ public class Producer : MonoBehaviour
 
                 progress = 0f;
             }
+        }
+    }
+
+    void ClearProcessingGoods()
+    {
+        for (int i = 0; i < productionRecipe.inputs.Count; i++)
+        {
+            processingGoods[i] = null;
         }
     }
 
