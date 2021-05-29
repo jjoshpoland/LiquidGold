@@ -6,13 +6,18 @@ using UnityEngine.Events;
 public class SeasonManager : MonoBehaviour
 {
     public float SeasonDuration = 240f;
+    public float MarketSeasonDuration = 60f;
     int currentSeason = -1;
+    int currentMarketSeason = -1;
     public UnityEvent OnSeasonEnd;
     public UnityEvent OnSeasonStart;
+    public UnityEvent OnMarketSeasonStart;
+    public UnityEvent OnMarketSeasonEnd;
     public UnityEvent<float> OnSeasonProgress;
     public static SeasonManager singleton;
     float seasonStart;
     bool seasonActive;
+    bool marketSeasonActive;
 
     public int CurrentSeason
     {
@@ -35,15 +40,31 @@ public class SeasonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time < seasonStart + SeasonDuration && seasonActive)
+        if(seasonActive)
         {
-            OnSeasonProgress.Invoke((Time.time - seasonStart) / SeasonDuration);   
+            if(Time.time < seasonStart + SeasonDuration)
+            {
+                OnSeasonProgress.Invoke((Time.time - seasonStart) / SeasonDuration);
+            }
+            else
+            {
+                seasonActive = false;
+                OnSeasonEnd.Invoke();
+            }
         }
-        else
+        else if(marketSeasonActive)
         {
-            seasonActive = false;
-            OnSeasonEnd.Invoke();
+            if (Time.time < seasonStart + MarketSeasonDuration)
+            {
+                OnSeasonProgress.Invoke((Time.time - seasonStart) / MarketSeasonDuration);
+            }
+            else
+            {
+                marketSeasonActive = false;
+                OnMarketSeasonEnd.Invoke();
+            }
         }
+
     }
 
     public void StartNewSeason()
@@ -52,5 +73,13 @@ public class SeasonManager : MonoBehaviour
         seasonActive = true;
         seasonStart = Time.time;
         OnSeasonStart.Invoke();
+    }
+
+    public void StartNewMarketSeason()
+    {
+        currentMarketSeason++;
+        marketSeasonActive = true;
+        seasonStart = Time.time;
+        OnMarketSeasonStart.Invoke();
     }
 }

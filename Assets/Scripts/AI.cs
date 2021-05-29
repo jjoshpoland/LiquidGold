@@ -10,12 +10,14 @@ public class AI : MonoBehaviour
     public Inventory mainInventory;
     public Player player;
     public Good targetGood;
+    public float TransportationTime = 3f;
 
     public float decisionTime = 2f;
     float lastDecision;
 
     public List<UtilityAction> actions;
     Dictionary<int, float> productionTimes;
+    public bool debugAI;
 
     private void Awake()
     {
@@ -59,7 +61,7 @@ public class AI : MonoBehaviour
                 //if they are found in the dictionary, check the time and produce accordingly. if not, they are new and will be added to the dictionary with the current time
                 if (productionTimes.TryGetValue(i, out float value))
                 {
-                    if (Time.time > value + prod.productionRecipe.time)
+                    if (Time.time > value + prod.productionRecipe.time + TransportationTime)
                     {
                         if(CanProduce(prod.productionRecipe))
                         {
@@ -68,6 +70,23 @@ public class AI : MonoBehaviour
                                 mainInventory.Deposit(output);
                             }
                         }
+
+                        productionTimes[i] = Time.time;
+                    }
+                }
+                else
+                {
+                    productionTimes.Add(i, Time.time);
+                }
+            }
+
+            if(building.TryGetComponent<Harvester>(out Harvester harvester))
+            {
+                if (productionTimes.TryGetValue(i, out float value))
+                {
+                    if (Time.time > value + harvester.harvestTime)
+                    {
+                        mainInventory.Deposit(harvester.Target);
 
                         productionTimes[i] = Time.time;
                     }
@@ -99,6 +118,7 @@ public class AI : MonoBehaviour
                 {
                     foundGood = true;
                     targetedIndeces.Add(i);
+                    break;
                 }
             }
 
@@ -108,9 +128,9 @@ public class AI : MonoBehaviour
             }
         }
 
-        foreach(int index in targetedIndeces)
+        for (int i = 0; i < recipe.inputs.Count; i++)
         {
-            mainInventory.goods.RemoveAt(index);
+            mainInventory.goods.Remove(recipe.inputs[i]);
         }
 
         return true;
@@ -124,23 +144,39 @@ public class AI : MonoBehaviour
         foreach(UtilityAction uAction in actions)
         {
             float score = 0;
+            float count = 0;
             foreach(ConsiderationWeight weight in uAction.considerations)
             {
                 float thisScore = weight.consideration.Evaluate(this) * weight.weight;
+                
                 if(weight.invert)
                 {
-                    thisScore = 0 - thisScore;
+                    thisScore = 1-thisScore;
                 }
-
+                if(debugAI)
+                {
+                    Debug.Log(weight.consideration + " has yielded a score of " + thisScore);
+                }
+                count += weight.weight;
                 score += thisScore;
             }
 
-            score = score / (float)uAction.considerations.Count;
+            
+            score = score / count;
 
             if(score > bestScore)
             {
+                if(debugAI)
+                {
+                    Debug.Log(uAction + " score of " + score + " beats the current best score of " + bestScore + " for " + bestAction);
+                }
+                
                 bestScore = score;
                 bestAction = uAction;
+            }
+            else if(debugAI)
+            {
+                Debug.Log(uAction + " score of " + score + " loses to the current best score of " + bestScore + " for " + bestAction);
             }
         }
 

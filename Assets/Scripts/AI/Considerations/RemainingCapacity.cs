@@ -9,8 +9,6 @@ public class RemainingCapacity : Consideration
     {
         float remainingCapacity = ai.mainInventory.remainingCapacity;
 
-        float numBuildings = ai.buildings.Count;
-
-        return numBuildings - remainingCapacity;
+        return 5f - remainingCapacity;
     }
 }

@@ -6,9 +6,11 @@ using UnityEngine;
 public class GoodAvailability : Consideration
 {
     public Good good;
+    
     public override float Evaluate(AI ai)
     {
-        float baseAvailability = 0f - Market.singleton.GetPrice(good);
+        float availableQuantity = 0f;
+        float currentDemand= 0f;
         Inventory mainInventory = ai.mainInventory;
 
         if(mainInventory != null)
@@ -17,9 +19,20 @@ public class GoodAvailability : Consideration
             {
                 if(b.TryGetComponent<Producer>(out Producer producer))
                 {
-                    if(producer.productionRecipe.outputs.Contains(good))
+                    for (int i = 0; i < producer.productionRecipe.outputs.Count; i++)
                     {
-                        baseAvailability += (Market.singleton.GetPrice(good) / producer.productionRecipe.time);
+                        if (producer.productionRecipe.outputs[i] == good)
+                        {
+                            availableQuantity += (1f / producer.productionRecipe.time);
+                        }
+                    }
+
+                    for (int i = 0; i < producer.productionRecipe.inputs.Count; i++)
+                    {
+                        if(producer.productionRecipe.inputs[i] == good)
+                        {
+                            currentDemand += (1f / producer.productionRecipe.time);
+                        }
                     }
                 }
             }
@@ -29,12 +42,30 @@ public class GoodAvailability : Consideration
             {
                 if(g == good)
                 {
-                    baseAvailability++;
+                    availableQuantity++;
                 }
             }
+
+            
         }
 
-        return baseAvailability;
+        if(ai.debugAI)
+        {
+            Debug.Log(good + " available quantity: " + availableQuantity + ", current demand: " + currentDemand);
+        }
+
+        if(currentDemand == 0)
+        {
+            if(availableQuantity > 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        return availableQuantity / currentDemand;
     }
 
     

@@ -9,9 +9,11 @@ public class BuildUI : MonoBehaviour
 {
 
     Tile currentTile;
+    public Tile EmptyTilePrefab;
     public Building currentBuilding;
     GameObject buildingGhost;
     PlayerInput input;
+    public bool Destroy;
 
     public UnityEvent OnNotEnoughResources;
     
@@ -32,7 +34,7 @@ public class BuildUI : MonoBehaviour
     }
 
     /// <summary>
-    /// Clears any existing building ghosts on the cursor and spawns a ghost to follow the cursor
+    /// Clears any existing building ghosts on the cursor and spawns a ghost to follow the cursor. Called by a UI button.
     /// </summary>
     /// <param name="building"></param>
     public void AttachBuildingGhostToMouse(Building building)
@@ -76,10 +78,30 @@ public class BuildUI : MonoBehaviour
             }
         }
     }
+
+    void DestroyCurrentBuilding()
+    {
+        if(currentTile != null
+            && currentTile.type == TileType.Structure)
+        {
+            if(TileMap.singleton.ReplaceTile(currentTile.coords, EmptyTilePrefab))
+            {
+                Destroy = false;
+            }
+        }
+    }
     #region InputEvents
     void OnSelect()
     {
-        PlaceCurrentBuilding();
+        if(currentBuilding != null)
+        {
+            PlaceCurrentBuilding();
+        }
+        
+        if(Destroy)
+        {
+
+        }
     }
     #endregion
 }

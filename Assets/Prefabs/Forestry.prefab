@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab187c197ef09c24393ea36aaa44247c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Indicator: {fileID: 5989798891929012494}
+  Indicator: {fileID: 2575999716391103940}
 --- !u!1001 &411531489259666133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,7 +23,11 @@ PrefabInstance:
     - target: {fileID: 508823833260058057, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1360c8ff8450e964fa933054943933d2, type: 2}
+      objectReference: {fileID: 2100000, guid: f8c0f9a2400f6ec4ba94e1fd638dbb3c, type: 2}
+    - target: {fileID: 2740941396285986577, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6234909615358193328, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
       propertyPath: m_Name
       value: Forestry
@@ -78,9 +82,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
---- !u!1 &5989798891929012494 stripped
+--- !u!1 &2575999716391103940 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 6239183056213685211, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2740941396285986577, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
   m_PrefabInstance: {fileID: 411531489259666133}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6069185316545686033

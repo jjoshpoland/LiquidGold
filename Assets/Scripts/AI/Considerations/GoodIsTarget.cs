@@ -10,11 +10,11 @@ public class GoodIsTarget : Consideration
     {
         if(ai.targetGood == good)
         {
-            return Market.singleton.GetPrice(good) * 2f;
+            return 1;
         }
         else
         {
-            return 0;
+            return .5f;
         }
     }
 
