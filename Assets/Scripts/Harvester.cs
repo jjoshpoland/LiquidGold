@@ -32,6 +32,10 @@ public class Harvester : Building
     // Update is called once per frame
     void Update()
     {
+        if(SeasonManager.singleton.IsMarketSeason)
+        {
+            return;
+        }
         if(Time.time > lastHarvest + harvestTime)
         {
             if(HarvestNearestResource())

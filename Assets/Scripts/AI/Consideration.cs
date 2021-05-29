@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Consideration : ScriptableObject
 {
+    public bool debug;
     public abstract float Evaluate(AI ai);
 }
 

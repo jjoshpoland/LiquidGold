@@ -6,15 +6,17 @@ using UnityEngine;
 public class GoodIsTarget : Consideration
 {
     public Good good;
+    public float trueValue;
+    public float falseValue;
     public override float Evaluate(AI ai)
     {
         if(ai.targetGood == good)
         {
-            return 1;
+            return trueValue;
         }
         else
         {
-            return .5f;
+            return falseValue;
         }
     }
 

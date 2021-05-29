@@ -13,9 +13,11 @@ public class AI : MonoBehaviour
     public float TransportationTime = 3f;
 
     public float decisionTime = 2f;
+    public float marketDecisionTime = 1f;
     float lastDecision;
 
-    public List<UtilityAction> actions;
+    public List<UtilityAction> seasonActions;
+    public List<UtilityAction> marketActions;
     Dictionary<int, float> productionTimes;
     public bool debugAI;
 
@@ -36,7 +38,8 @@ public class AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > lastDecision + decisionTime)
+        float requiredTime = SeasonManager.singleton.IsMarketSeason ? marketDecisionTime : decisionTime;
+        if(Time.time > lastDecision + requiredTime)
         {
             UtilityAction bestAction = EvaluateActions();
             if(bestAction != null)
@@ -46,7 +49,11 @@ public class AI : MonoBehaviour
             lastDecision = Time.time;
         }
 
-        Produce();
+        if(!SeasonManager.singleton.IsMarketSeason)
+        {
+            Produce();
+        }
+        
     }
 
     void Produce()
@@ -138,8 +145,9 @@ public class AI : MonoBehaviour
 
     UtilityAction EvaluateActions()
     {
-        float bestScore = float.MinValue;
+        float bestScore = 0f;
         UtilityAction bestAction = null;
+        List<UtilityAction> actions = SeasonManager.singleton.IsMarketSeason ? marketActions : seasonActions;
 
         foreach(UtilityAction uAction in actions)
         {
@@ -151,11 +159,11 @@ public class AI : MonoBehaviour
                 
                 if(weight.invert)
                 {
-                    thisScore = 1-thisScore;
+                    thisScore = 1 - thisScore;
                 }
                 if(debugAI)
                 {
-                    Debug.Log(weight.consideration + " has yielded a score of " + thisScore);
+                    //Debug.Log(weight.consideration + " has yielded a score of " + thisScore);
                 }
                 count += weight.weight;
                 score += thisScore;
@@ -168,7 +176,7 @@ public class AI : MonoBehaviour
             {
                 if(debugAI)
                 {
-                    Debug.Log(uAction + " score of " + score + " beats the current best score of " + bestScore + " for " + bestAction);
+                    //Debug.Log(uAction + " score of " + score + " beats the current best score of " + bestScore + " for " + bestAction);
                 }
                 
                 bestScore = score;
@@ -176,8 +184,13 @@ public class AI : MonoBehaviour
             }
             else if(debugAI)
             {
-                Debug.Log(uAction + " score of " + score + " loses to the current best score of " + bestScore + " for " + bestAction);
+                //Debug.Log(uAction + " score of " + score + " loses to the current best score of " + bestScore + " for " + bestAction);
             }
+        }
+
+        if(debugAI)
+        {
+            Debug.Log(bestAction + " is the best action with a score of " + bestScore);
         }
 
         return bestAction;

@@ -24,7 +24,7 @@ public class GlobalInventory : MonoBehaviour
         {
             drachmae = value;
             OnDrachmaeUpdated.Invoke(drachmae);
-            OnDrachmaeUpdated_Label.Invoke(drachmae.ToString());
+            OnDrachmaeUpdated_Label.Invoke(drachmae.ToString() + " \u03B4");
         }
     }
     
@@ -88,7 +88,7 @@ public class GlobalInventory : MonoBehaviour
         }
         else
         {
-            Debug.Log(good + " added to global inventory for first time");
+            //Debug.Log(good + " added to global inventory for first time");
             quantities.Add(good, 1);
         }
         //Debug.Log(good + " has been added, quantity now " + quantities[good]);

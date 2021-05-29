@@ -15,4 +15,4 @@ MonoBehaviour:
   inputs: []
   outputs:
   - {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
-  time: 20
+  time: 6

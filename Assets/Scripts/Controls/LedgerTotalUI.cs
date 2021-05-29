@@ -30,7 +30,7 @@ public class LedgerTotalUI : MonoBehaviour
     {
         if(type == TotalType.Profit)
         {
-            text.text = player.CurrentProfits.ToString();
+            text.text = player.inventory.Drachmae.ToString();
         }
         else if(type == TotalType.Goods)
         {

@@ -46,6 +46,7 @@ public class LedgerUI : MonoBehaviour
         if(player.inventory.AddGoods(new GoodQuantity(good, 1)))
         {
             player.inventory.Drachmae = player.inventory.Drachmae - Market.singleton.PlaceOrder(new GoodQuantity(good, 1), player);
+            Market.singleton.UpdatePrices();
         }
         
     }
@@ -55,6 +56,7 @@ public class LedgerUI : MonoBehaviour
         if(player.inventory.PullGoods(new GoodQuantity(good, 1)))
         {
             player.inventory.Drachmae = player.inventory.Drachmae - Market.singleton.PlaceOrder(new GoodQuantity(good, -1), player);
+            Market.singleton.UpdatePrices();
         }
         
     }

@@ -13,7 +13,7 @@ public class BuildUI : MonoBehaviour
     public Building currentBuilding;
     GameObject buildingGhost;
     PlayerInput input;
-    public bool Destroy;
+    public bool Destroying;
 
     public UnityEvent OnNotEnoughResources;
     
@@ -86,7 +86,7 @@ public class BuildUI : MonoBehaviour
         {
             if(TileMap.singleton.ReplaceTile(currentTile.coords, EmptyTilePrefab))
             {
-                Destroy = false;
+                Destroying = false;
             }
         }
     }
@@ -98,7 +98,7 @@ public class BuildUI : MonoBehaviour
             PlaceCurrentBuilding();
         }
         
-        if(Destroy)
+        if(Destroying)
         {
 
         }

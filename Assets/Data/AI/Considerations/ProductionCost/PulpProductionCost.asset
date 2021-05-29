@@ -12,10 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: PulpProductionCost
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  debug: 0
   recipe: {fileID: 11400000, guid: b835297001336194dac2e629f6ebe166, type: 2}

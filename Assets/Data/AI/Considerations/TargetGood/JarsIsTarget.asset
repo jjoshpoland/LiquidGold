@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531cd4fa4975c884ba6f389e9aa3d0bd, type: 3}
   m_Name: JarsIsTarget
   m_EditorClassIdentifier: 
+  debug: 0
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
+  trueValue: 1
+  falseValue: 0.5

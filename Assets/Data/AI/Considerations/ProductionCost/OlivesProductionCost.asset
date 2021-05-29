@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: OlivesProductionCost
   m_EditorClassIdentifier: 
+  debug: 0
   recipe: {fileID: 11400000, guid: cba815b41dd245e4e86c81888eefa90e, type: 2}

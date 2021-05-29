@@ -55,6 +55,11 @@ public class Transport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SeasonManager.singleton.IsMarketSeason)
+        {
+            agent.isStopped = true;
+            return;
+        }
         agent.isStopped = false;
         if(destination == null)
         {

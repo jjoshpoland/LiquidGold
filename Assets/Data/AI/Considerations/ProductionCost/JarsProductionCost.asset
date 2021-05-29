@@ -12,10 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: JarsProductionCost
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  debug: 0
   recipe: {fileID: 11400000, guid: 3b6ae375eb103cc4885a48c793aef806, type: 2}

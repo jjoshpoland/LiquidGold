@@ -12,10 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: OilProductionCost
   m_EditorClassIdentifier: 
-  curve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  debug: 0
   recipe: {fileID: 11400000, guid: eb0beb03256c22548a7d3bdff48ff2a8, type: 2}

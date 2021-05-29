@@ -19,6 +19,14 @@ public class SeasonManager : MonoBehaviour
     bool seasonActive;
     bool marketSeasonActive;
 
+    public bool IsMarketSeason
+    {
+        get
+        {
+            return !seasonActive && marketSeasonActive;
+        }
+    }
+
     public int CurrentSeason
     {
         get

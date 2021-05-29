@@ -11,7 +11,7 @@ public class GoodProductionCostBenefit : Consideration
     {
         if(recipe == null)
         {
-            return 1;
+            
         }
         float cost = 0;
         foreach(Good input in recipe.inputs)
@@ -28,6 +28,11 @@ public class GoodProductionCostBenefit : Consideration
         if(cost == 0)
         {
             cost = 1;
+        }
+
+        if(ai.debugAI && debug)
+        {
+            Debug.Log(recipe + " cost benefit is " + (benefit / cost).ToString());
         }
 
         return benefit / cost;

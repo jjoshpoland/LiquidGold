@@ -49,7 +49,7 @@ public class GoodAvailability : Consideration
             
         }
 
-        if(ai.debugAI)
+        if(ai.debugAI && debug)
         {
             Debug.Log(good + " available quantity: " + availableQuantity + ", current demand: " + currentDemand);
         }

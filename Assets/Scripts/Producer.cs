@@ -64,6 +64,10 @@ public class Producer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(SeasonManager.singleton.IsMarketSeason)
+        {
+            return;
+        }
         if(producing)
         {
             progress = Mathf.Min((Time.time - cycleStartTime) / productionRecipe.time, 1f);

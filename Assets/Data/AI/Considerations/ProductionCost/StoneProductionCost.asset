@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: StoneProductionCost
   m_EditorClassIdentifier: 
+  debug: 0
   recipe: {fileID: 11400000, guid: e8f96c98785a56c4fadca509827a40f7, type: 2}

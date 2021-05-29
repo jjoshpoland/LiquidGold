@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 531cd4fa4975c884ba6f389e9aa3d0bd, type: 3}
   m_Name: StoneIsTarget
   m_EditorClassIdentifier: 
+  debug: 0
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
+  trueValue: 1
+  falseValue: 0.5

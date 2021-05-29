@@ -6,26 +6,38 @@ using UnityEngine.Events;
 public class Market : MonoBehaviour
 {
     public List<GoodQuantity> Prices;
+    public List<GoodQuantity> Quantities;
     Dictionary<Good, int> priceMap;
-    Dictionary<Good, int> demand;
+    Dictionary<Good, int> quantityMap;
     public static Market singleton;
     public UnityEvent OnOrderPlaced;
+    public UnityEvent OnPricesUpdated;
     private void Awake()
     {
         singleton = this;
+        priceMap = new Dictionary<Good, int>();
+        quantityMap = new Dictionary<Good, int>();
+
+
+        foreach (GoodQuantity gq in Quantities)
+        {
+            quantityMap.Add(gq.good, gq.quantity);
+        }
+        UpdatePrices();
+        SeasonManager.singleton.OnMarketSeasonStart.AddListener(UpdatePrices);
+        //foreach (GoodQuantity gq in Prices)
+        //{
+        //    priceMap.Add(gq.good, GetPrice(gq.good));
+
+        //}
+
+
+        Player[] players = FindObjectsOfType<Player>();
     }
     // Start is called before the first frame update
     void Start()
     {
-        priceMap = new Dictionary<Good, int>();
-        demand = new Dictionary<Good, int>();
-        foreach(GoodQuantity gq in Prices)
-        {
-            priceMap.Add(gq.good, gq.quantity);
-            demand.Add(gq.good, 0);
-        }
-
-        Player[] players = FindObjectsOfType<Player>();
+        
         
     }
 
@@ -33,6 +45,37 @@ public class Market : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UpdatePrices()
+    {
+        for (int i = 0; i < Prices.Count; i++)
+        {
+            GoodQuantity gq = Prices[i];
+            int newPrice = CalculatePrice(quantityMap[gq.good]);
+            gq.quantity = newPrice;
+            Quantities[i].quantity = quantityMap[gq.good];
+            priceMap[gq.good] = newPrice;
+            //Debug.Log(gq.good + " quantity is now " + quantityMap[gq.good]);
+        }
+
+        OnPricesUpdated.Invoke();
+    }
+
+    int CalculatePrice(int quantity)
+    {
+        float realQuantity = quantity;
+        if(realQuantity == 0)
+        {
+            realQuantity = 1;
+        }
+        else if(realQuantity < 0)
+        {
+            realQuantity = 1f / Mathf.Abs(realQuantity);
+        }
+        float price = 1f / realQuantity;
+        price *= 1000f;
+        return Mathf.RoundToInt(price);
     }
 
     public int GetPrice(Good good)
@@ -47,18 +90,7 @@ public class Market : MonoBehaviour
         }
     }
 
-    public void UpdateMarket(List<GoodQuantity> newPrices)
-    {
-        foreach(GoodQuantity price in newPrices)
-        {
-            priceMap[price.good] = price.quantity;
-        }
 
-        foreach(GoodQuantity price in Prices)
-        {
-            price.quantity = priceMap[price.good];
-        }
-    }
 
     /// <summary>
     /// Stores the order information and returns the cost
@@ -72,11 +104,12 @@ public class Market : MonoBehaviour
         foreach(GoodQuantity gq in order)
         {
             cost += priceMap[gq.good] * gq.quantity;
-            demand[gq.good] += gq.quantity;
+            quantityMap[gq.good] -= gq.quantity;
             player.AddOrderToCurrentLedger(gq);
         }
         player.AddProfitsToCurrentLedger(cost);
         OnOrderPlaced.Invoke();
+        UpdatePrices();
         return cost;
     }
 
@@ -89,11 +122,12 @@ public class Market : MonoBehaviour
     public int PlaceOrder(GoodQuantity order, Player player)
     {
         int cost = priceMap[order.good] * order.quantity;
-        demand[order.good] += order.quantity;
+        quantityMap[order.good] -= order.quantity;
         player.AddOrderToCurrentLedger(order);
 
         player.AddProfitsToCurrentLedger(cost);
         OnOrderPlaced.Invoke();
+        UpdatePrices();
         return cost;
         
     }

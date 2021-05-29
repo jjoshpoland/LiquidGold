@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3997fffa04711c2498ebb77abe5c9790, type: 3}
   m_Name: ClayProductionCost
   m_EditorClassIdentifier: 
+  debug: 0
   recipe: {fileID: 11400000, guid: 41d1bc371919a1f4f8d828e9e9e749aa, type: 2}
