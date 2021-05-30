@@ -216,7 +216,7 @@ public class Transport : MonoBehaviour
         foreach(Inventory inv in GlobalInventory.singleton.inventories)
         {
             //if this inventory doesnt allow the goods contained, skip
-            if (!inv.allowedGoods.Contains(CurrentGoods)) continue;
+            if (!inv.allowedGoods.Contains(CurrentGoods) || !inv.allowTransportWithdrawal) continue;
             //if this inventory is full, skip
             if (inv.remainingCapacity <= 0) continue;
             //if this inventory is not accessible

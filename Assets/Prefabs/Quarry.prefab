@@ -19,6 +19,18 @@ PrefabInstance:
       propertyPath: TransportPrefab
       value: 
       objectReference: {fileID: 2717032930372108092, guid: d692691aeb647cc4c90d04efc5932923, type: 3}
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: allowTransportWithdrawal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: emptyingGoods.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 989090655493557256, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: emptyingGoods.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: cost.Array.size
       value: 1

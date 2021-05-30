@@ -155,6 +155,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1566439820288619321, guid: 361047bab63864f42a490c665966ddcf, type: 3}
+      propertyPath: allowTransportWithdrawal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566439820288619321, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: emptyingGoods.Array.size
       value: 1
       objectReference: {fileID: 0}

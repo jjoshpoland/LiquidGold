@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class Inventory : MonoBehaviour
 {
     public bool AIOnly;
+    public bool allowTransportWithdrawal;
     public List<Good> goods;
 
     //these are filtering lists
