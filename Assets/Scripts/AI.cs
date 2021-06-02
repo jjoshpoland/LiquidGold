@@ -19,10 +19,13 @@ public class AI : MonoBehaviour
     public List<UtilityAction> seasonActions;
     public List<UtilityAction> marketActions;
     Dictionary<int, float> productionTimes;
+    Dictionary<Building, int> buildingCounts;
     public bool debugAI;
+    public int BuildingMax;
 
     private void Awake()
     {
+        buildingCounts = new Dictionary<Building, int>();
         productionTimes = new Dictionary<int, float>();
         globalInventory = GetComponent<GlobalInventory>();
         mainInventory = GetComponent<Inventory>();
@@ -141,6 +144,40 @@ public class AI : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void AddBuilding(Building building)
+    {
+        buildings.Add(building);
+        if(buildingCounts.TryGetValue(building, out int value))
+        {
+            
+            buildingCounts[building] = value + 1;
+        }
+        else
+        {
+            buildingCounts.Add(building, 1);
+        }
+    }
+
+    public void RemoveBuilding(Building building)
+    {
+        if(buildings.Remove(building))
+        {
+            buildingCounts[building] = buildingCounts[building] - 1;
+        }
+    }
+
+    public int GetBuildingCount(Building building)
+    {
+        if(buildingCounts.TryGetValue(building, out int value))
+        {
+            return value;
+        }
+        else
+        {
+            return 0;
+        }
     }
 
     UtilityAction EvaluateActions()

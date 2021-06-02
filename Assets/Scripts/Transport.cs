@@ -216,7 +216,7 @@ public class Transport : MonoBehaviour
         foreach(Inventory inv in GlobalInventory.singleton.inventories)
         {
             //if this inventory doesnt allow the goods contained, skip
-            if (!inv.allowedGoods.Contains(CurrentGoods) || !inv.allowTransportWithdrawal) continue;
+            if (!inv.allowedGoods.Contains(CurrentGoods)) continue;
             //if this inventory is full, skip
             if (inv.remainingCapacity <= 0) continue;
             //if this inventory is not accessible
@@ -260,9 +260,10 @@ public class Transport : MonoBehaviour
 
         foreach (Inventory inv in GlobalInventory.singleton.inventories)
         {
+            if (!inv.allowTransportWithdrawal) continue;
             //if this inventory doesnt have the goods targeted, skip
             if (!inv.goods.Contains(targetGood)) continue;
-            if (inv.gameObject == home) continue;
+            //if (inv.gameObject == home) continue;
 
             //find the distance and if its closer than the nearest stored inv, make this the nearest inv
             float distance = Vector3.Distance(transform.position, inv.transform.position);
@@ -281,6 +282,8 @@ public class Transport : MonoBehaviour
         Inventory[] homeInventories = home.GetComponents<Inventory>();
         for (int j = 0; j < homeInventories.Length; j++)
         {
+            if (!homeInventories[j].allowTransportWithdrawal) continue;
+
             for (int i = 0; i < homeInventories[j].emptyingGoods.Count; i++)
             {
                 //does this inventory contain any goods on its own emptying list?
@@ -306,12 +309,20 @@ public class Transport : MonoBehaviour
         {
             for (int i = 0; i < homeInventories[j].requestedGoods.Count; i++)
             {
+                if(homeInventories[j].remainingCapacity == 0)
+                {
+                    continue;
+                }
                 targetGood = homeInventories[j].requestedGoods[i];
                 destination = FindAvailableProvider();
                 if (destination != null)
                 {
                     break;
                 }
+            }
+            if(destination != null)
+            {
+                break;
             }
         }
     }

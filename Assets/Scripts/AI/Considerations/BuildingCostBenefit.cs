@@ -8,8 +8,17 @@ public class BuildingCostBenefit : Consideration
     public GoodProductionCostBenefit productionConsideration;
     public Building building;
     public float breakEvenTimeGoal = 30f;
+    /// <summary>
+    /// Used to determine the maximum number of these buildings compared to the maximum number of buildings allowed
+    /// </summary>
+    public float buildingRatioMax = .25f;
     public override float Evaluate(AI ai)
     {
+        //check if there have been too many of these built
+        if ((float)(ai.GetBuildingCount(building) / ai.BuildingMax) > buildingRatioMax)
+        {
+            return -1;
+        }
         float buildCost = 0;
         foreach(GoodQuantity gq in building.cost)
         {

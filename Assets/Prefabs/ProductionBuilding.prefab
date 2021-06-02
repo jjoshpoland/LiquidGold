@@ -148,7 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainPlayer: 1
+  AIOnly: 0
+  allowTransportWithdrawal: 1
   goods: []
   allowedGoods: []
   requestedGoods: []

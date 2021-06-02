@@ -9,9 +9,9 @@ public class Harvester : Building
     public Good Target;
     public float harvestTime;
     public int range;
-
+    bool active;
     public UnityEvent<Good> OnHarvest;
-
+    public UnityEvent OnResourcesDepleted;
     float lastHarvest;
     Inventory inventory;
     List<Resource> KnownResourcesInRange;
@@ -36,12 +36,17 @@ public class Harvester : Building
         {
             return;
         }
-        if(Time.time > lastHarvest + harvestTime)
+        if(active && Time.time > lastHarvest + harvestTime)
         {
             if(HarvestNearestResource())
             {
                 lastHarvest = Time.time;
                 OnHarvest.Invoke(Target);
+            }
+            else
+            {
+                active = false;
+                OnResourcesDepleted.Invoke();
             }
         }
     }
@@ -88,6 +93,10 @@ public class Harvester : Building
     bool HarvestNearestResource()
     {
         if(inventory.remainingCapacity <= 0)
+        {
+            return false;
+        }
+        if(KnownResourcesInRange == null)
         {
             return false;
         }

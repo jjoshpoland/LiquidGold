@@ -16,3 +16,4 @@ MonoBehaviour:
   productionConsideration: {fileID: 11400000, guid: 5af7766526db6d74dbe7db29783ea60a, type: 2}
   building: {fileID: 6588524544060527366, guid: 7be8c4fbfeacd1144935e4b9dbc61288, type: 3}
   breakEvenTimeGoal: 30
+  buildingRatioMax: 0.1

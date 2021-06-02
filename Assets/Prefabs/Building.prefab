@@ -62,6 +62,7 @@ MonoBehaviour:
   coords: {x: 8, y: 10}
   ghostPrefab: {fileID: 7432911573527161021, guid: 4499342ccad906d4abac918433c8041d, type: 3}
   constraints: []
+  cost: []
 --- !u!1 &3982485605848239996
 GameObject:
   m_ObjectHideFlags: 0

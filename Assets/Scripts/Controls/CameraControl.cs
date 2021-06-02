@@ -19,7 +19,7 @@ public class CameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(move.x, -scroll / 2f, move.y) * speed * Time.deltaTime;
+        transform.position += new Vector3(move.x, -scroll / 4f, move.y) * speed * Time.deltaTime;
         if(transform.position.y < minCamHeight)
         {
             transform.position = new Vector3(transform.position.x, minCamHeight, transform.position.z);

@@ -38,7 +38,7 @@ public class Producer : MonoBehaviour
                 {
                     if (inputInv.allowedGoods.Contains(input))
                     {
-                        inputInv.maxCapacity += Mathf.RoundToInt(productionRecipe.time);
+                        inputInv.maxCapacity += 2;
                         alreadyCounted = true;
                     }
                 }
@@ -49,7 +49,8 @@ public class Producer : MonoBehaviour
                 newInput.enabled = true;
                 newInput.allowedGoods.Add(input);
                 newInput.requestedGoods.Add(input);
-                newInput.maxCapacity += Mathf.RoundToInt(productionRecipe.time);
+                newInput.maxCapacity = 2;
+                newInput.allowTransportWithdrawal = false;
                 inputs.Add(newInput);
             }
             foreach (Good output in productionRecipe.outputs)
