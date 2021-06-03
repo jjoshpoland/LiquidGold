@@ -15,7 +15,7 @@ public class Transport : MonoBehaviour
 
     public UnityEvent OnDropOff;
     public UnityEvent OnPickUp;
-    
+    Animator animator;
 
     public bool IsEmpty
     {
@@ -42,6 +42,7 @@ public class Transport : MonoBehaviour
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         home = transform.parent.gameObject;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -81,6 +82,10 @@ public class Transport : MonoBehaviour
             Interact();
         }
 
+        if(animator != null)
+        {
+            animator.SetBool("Moving", agent.desiredVelocity.magnitude > .1f);
+        }
         
     }
 
