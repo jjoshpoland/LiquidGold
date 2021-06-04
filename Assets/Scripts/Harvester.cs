@@ -15,7 +15,7 @@ public class Harvester : Building
     float lastHarvest;
     Inventory inventory;
     List<Resource> KnownResourcesInRange;
-
+    public int AIMaxHarvests = 25;
     private void Awake()
     {
         
@@ -24,9 +24,11 @@ public class Harvester : Building
     // Start is called before the first frame update
     void Start()
     {
+        active = true;
         inventory = GetComponent<Inventory>();
         FindResourcesInRange();
         lastHarvest = Time.time;
+        
     }
 
     // Update is called once per frame

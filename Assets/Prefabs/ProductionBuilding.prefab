@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1719818025234815223
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8801021080029104992}
+  m_Layer: 0
+  m_Name: FloatingTextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8801021080029104992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1719818025234815223}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5191481066670052080}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!1 &3586858016959844497
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,7 +195,19 @@ MonoBehaviour:
       m_Calls: []
   OnDeposit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7768643457350010493}
+        m_TargetAssemblyTypeName: FloatingTextManager, Assembly-CSharp
+        m_MethodName: DoPositiveFloatingText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnWithdraw:
     m_PersistentCalls:
       m_Calls: []
@@ -210,6 +252,20 @@ MonoBehaviour:
   OnOutput:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7768643457350010493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6660515776996334688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8344749622ed14ca9a5c81751e09dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextPrefab: {fileID: 3705251736124522398, guid: ab4f29324623d6e41ab0622b2c86dad0, type: 3}
+  spawnPoint: {fileID: 8801021080029104992}
 --- !u!1001 &6336317614834042302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,6 +338,11 @@ PrefabInstance:
 --- !u!1 &6660515776996334688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+  m_PrefabInstance: {fileID: 6336317614834042302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5191481066670052080 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2298181384242665294, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
   m_PrefabInstance: {fileID: 6336317614834042302}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &5700270433204842558 stripped

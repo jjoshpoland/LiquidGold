@@ -14,14 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 4
   coords: {x: 0, y: 0}
+  RandomRotationOnStart: 0
   ghostPrefab: {fileID: 7432911573527161021, guid: 4499342ccad906d4abac918433c8041d, type: 3}
   constraints: []
+  cost: []
+  draggable: 0
+  DisplayText: 
   Target: {fileID: 0}
   harvestTime: 5
   range: 15
   OnHarvest:
     m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5782110172408234199}
+        m_TargetAssemblyTypeName: FloatingTextManager, Assembly-CSharp
+        m_MethodName: DoPositiveFloatingText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnResourcesDepleted:
+    m_PersistentCalls:
       m_Calls: []
+  AIMaxHarvests: 25
 --- !u!114 &1566439820288619321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,6 +54,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1be867b08af7c4d9165285406132b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AIOnly: 0
+  allowTransportWithdrawal: 0
   goods: []
   allowedGoods: []
   requestedGoods: []
@@ -53,6 +75,50 @@ MonoBehaviour:
   OnWithdraw:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5782110172408234199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258259659546702386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8344749622ed14ca9a5c81751e09dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextPrefab: {fileID: 3705251736124522398, guid: ab4f29324623d6e41ab0622b2c86dad0, type: 3}
+  spawnPoint: {fileID: 3335000695317477508}
+--- !u!1 &4549700566247745783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3335000695317477508}
+  m_Layer: 0
+  m_Name: FloatingTextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3335000695317477508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549700566247745783}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4130529476155849890}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!1001 &2789506519840828396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,5 +180,10 @@ PrefabInstance:
 --- !u!1 &3258259659546702386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 829217051242109406, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+  m_PrefabInstance: {fileID: 2789506519840828396}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4130529476155849890 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2298181384242665294, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
   m_PrefabInstance: {fileID: 2789506519840828396}
   m_PrefabAsset: {fileID: 0}

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 
 public class LedgerUI : MonoBehaviour
 {
     public Good good;
     public Player player;
     public TMP_Text quantity;
+    public UnityEvent OnBuySuccess;
+    public UnityEvent OnSellSuccess;
     private void Awake()
     {
 
@@ -47,6 +50,7 @@ public class LedgerUI : MonoBehaviour
         {
             player.inventory.Drachmae = player.inventory.Drachmae - Market.singleton.PlaceOrder(new GoodQuantity(good, 1), player);
             Market.singleton.UpdatePrices();
+            OnBuySuccess.Invoke();
         }
         
     }
@@ -57,6 +61,7 @@ public class LedgerUI : MonoBehaviour
         {
             player.inventory.Drachmae = player.inventory.Drachmae - Market.singleton.PlaceOrder(new GoodQuantity(good, -1), player);
             Market.singleton.UpdatePrices();
+            OnSellSuccess.Invoke();
         }
         
     }

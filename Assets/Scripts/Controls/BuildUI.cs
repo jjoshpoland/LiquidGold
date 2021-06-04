@@ -12,10 +12,13 @@ public class BuildUI : MonoBehaviour
     public Tile EmptyTilePrefab;
     public Building currentBuilding;
     GameObject buildingGhost;
+    public GameObject destructionGhost;
     PlayerInput input;
     public bool Destroying;
-
+    bool dragging;
     public UnityEvent OnNotEnoughResources;
+    public UnityEvent OnConstraintsNotMet;
+    public UnityEvent OnBuildingPlaced;
     
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,11 @@ public class BuildUI : MonoBehaviour
         currentTile = MapInfo.singleton.currentTile;
         if (currentTile != null && buildingGhost != null)
         {
-            buildingGhost.transform.position = currentTile.transform.position;
+            buildingGhost.transform.position = currentTile.transform.position + new Vector3(0, .25f, 0);
+        }
+        if(dragging)
+        {
+            PlaceCurrentBuilding();
         }
     }
 
@@ -48,6 +55,19 @@ public class BuildUI : MonoBehaviour
         buildingGhost = newGhost;
         currentBuilding = building;
     }
+
+    public void StartDestroying()
+    {
+        if (buildingGhost != null)
+        {
+            Destroy(buildingGhost);
+            buildingGhost = null;
+        }
+        Destroying = true;
+        buildingGhost = Instantiate(destructionGhost);
+    }
+
+    
 
     
     /// <summary>
@@ -71,11 +91,27 @@ public class BuildUI : MonoBehaviour
             //Debug.Log("replacing " + currentTile + " @ " + currentTile.coords);
             if(TileMap.singleton.ReplaceTile(currentTile.coords, currentBuilding))
             {
-                currentBuilding = null;
-                Destroy(buildingGhost);
-                buildingGhost = null;
+                if(!currentBuilding.draggable)
+                {
+                    currentBuilding = null;
+                    Destroy(buildingGhost);
+                    buildingGhost = null;
+                }
+                else
+                {
+                    dragging = true;
+                }
+                OnBuildingPlaced.Invoke();
                 //fire on placed building event
             }
+        }
+        else
+        {
+            if(!dragging)
+            {
+                OnConstraintsNotMet.Invoke();
+            }
+            
         }
     }
 
@@ -86,7 +122,7 @@ public class BuildUI : MonoBehaviour
         {
             if(TileMap.singleton.ReplaceTile(currentTile.coords, EmptyTilePrefab))
             {
-                Destroying = false;
+                
             }
         }
     }
@@ -100,8 +136,43 @@ public class BuildUI : MonoBehaviour
         
         if(Destroying)
         {
-
+            DestroyCurrentBuilding();
         }
+    }
+
+    void OnRelease()
+    {
+        if (!dragging) return;
+        dragging = false;
+        
+    }
+
+    public void OnCancel()
+    {
+        if (buildingGhost != null)
+        {
+            Destroy(buildingGhost);
+        }
+        if (Destroying)
+        {
+            Destroying = false;
+        }
+
+        if (dragging)
+        {
+            dragging = false;
+        }
+
+        currentBuilding = null;
+        buildingGhost = null;
+
+    }
+
+    void OnAltSelect()
+    {
+
+        OnCancel();
+        
     }
     #endregion
 }

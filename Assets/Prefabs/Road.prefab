@@ -159,6 +159,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4733886351950478676, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: m_Center.y
+      value: 4.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: draggable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: DisplayText
+      value: Road
+      objectReference: {fileID: 0}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: ghostPrefab
       value: 
@@ -195,8 +207,7 @@ PrefabInstance:
       propertyPath: cost.Array.data[1].quantity
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4733886351950478676, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
 --- !u!4 &6590366942460088614 stripped
 Transform:

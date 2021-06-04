@@ -494,12 +494,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: DisplayText
+      value: Olive Oil Press
+      objectReference: {fileID: 0}
+    - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: cost.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: constraints.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: cost.Array.data[0].good
@@ -517,6 +521,10 @@ PrefabInstance:
       propertyPath: constraints.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 80e79fdbdf1c98b429e2491bd1e9bd02, type: 2}
+    - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: constraints.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f28a51dd4430e3046b9b78079d1faee7, type: 2}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: cost.Array.data[0].quantity
       value: 5

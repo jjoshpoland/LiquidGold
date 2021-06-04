@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &277232709747329876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2622660640708938959}
+  m_Layer: 0
+  m_Name: FloatingTextSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2622660640708938959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277232709747329876}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
+  m_LocalPosition: {x: 0, y: 4, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5730640716929454575}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!1 &4644613839324672378
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,12 +109,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8200011860134217899}
+        m_TargetAssemblyTypeName: FloatingTextManager, Assembly-CSharp
+        m_MethodName: DoPositiveFloatingText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnWithdraw:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6668092470547755494}
         m_TargetAssemblyTypeName: WarehouseDisplay, Assembly-CSharp
         m_MethodName: RemoveGood
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8200011860134217899}
+        m_TargetAssemblyTypeName: FloatingTextManager, Assembly-CSharp
+        m_MethodName: DoNegativeFloatingText
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -113,6 +167,20 @@ MonoBehaviour:
   length: 5
   gridOrigin: {fileID: 4483592178700571671}
   testPrefab: {fileID: 4492400096528848436, guid: de704aae377c1f74e8333233aba787e7, type: 3}
+--- !u!114 &8200011860134217899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620973250412339071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8344749622ed14ca9a5c81751e09dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatingTextPrefab: {fileID: 3705251736124522398, guid: ab4f29324623d6e41ab0622b2c86dad0, type: 3}
+  spawnPoint: {fileID: 2622660640708938959}
 --- !u!1001 &709081684840116075
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,12 +298,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: DisplayText
+      value: Warehouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: cost.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: constraints.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: cost.Array.data[0].good
@@ -245,6 +317,10 @@ PrefabInstance:
       propertyPath: constraints.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 80e79fdbdf1c98b429e2491bd1e9bd02, type: 2}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: constraints.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f28a51dd4430e3046b9b78079d1faee7, type: 2}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: cost.Array.data[0].quantity
       value: 5

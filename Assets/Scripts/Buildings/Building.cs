@@ -7,6 +7,8 @@ public class Building : Tile
     public GameObject ghostPrefab;
     public List<StructurePlacementConstraint> constraints;
     public List<GoodQuantity> cost;
+    public bool draggable;
+    public string DisplayText;
     // Start is called before the first frame update
     void Start()
     {

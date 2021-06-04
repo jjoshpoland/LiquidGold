@@ -11,12 +11,14 @@ public class Transport : MonoBehaviour
     public Inventory destination;
     public List<Good> goods;
     public Good targetGood;
+    public float interactionRange;
     NavMeshAgent agent;
 
     public UnityEvent OnDropOff;
-    public UnityEvent OnPickUp;
+    public UnityEvent<Good> OnPickUp;
     Animator animator;
-
+    public GameObject displayModel;
+    public Transform carrySpot;
     public bool IsEmpty
     {
         get
@@ -50,6 +52,23 @@ public class Transport : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        OnPickUp.AddListener(ShowCarriedGood);
+        OnDropOff.AddListener(EmptyCarriedGood);
+    }
+
+    void ShowCarriedGood(Good good)
+    {
+        displayModel = Instantiate(good.model, carrySpot);
+    }
+
+    void EmptyCarriedGood()
+    {
+        if(displayModel != null)
+        {
+            Destroy(displayModel);
+            displayModel = null;
+
+        }
         
     }
 
@@ -146,7 +165,7 @@ public class Transport : MonoBehaviour
                 if(destination.GetGood(targetGood))
                 {
                     goods.Add(targetGood);
-                    OnPickUp.Invoke();
+                    OnPickUp.Invoke(targetGood);
                     destination = null;
                     targetGood = null;
                 }
@@ -185,7 +204,7 @@ public class Transport : MonoBehaviour
         if (destination == null) return false;
         
         //check if its close enough
-        if(Vector3.Distance(transform.position, destination.transform.position) < 6f)
+        if(Vector3.Distance(transform.position, destination.transform.position) < interactionRange)
         {
             return true;
         }
@@ -193,7 +212,7 @@ public class Transport : MonoBehaviour
         //if its not close enough, it might be on the outer edge of the collider of the destination and needs to search for it
         Ray ray = new Ray(transform.position + new Vector3(0, .5f, 0), destination.transform.position + new Vector3(0, .5f, 0));
 
-        if(Physics.Raycast(ray, out RaycastHit hitInfo, 2f))
+        if(Physics.Raycast(ray, out RaycastHit hitInfo, interactionRange / 3f))
         {
             if(hitInfo.collider.TryGetComponent<Inventory>(out Inventory foundInventory))
             {

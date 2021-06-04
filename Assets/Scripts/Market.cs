@@ -74,7 +74,7 @@ public class Market : MonoBehaviour
             realQuantity = 1f / Mathf.Abs(realQuantity);
         }
         float price = 1f / realQuantity;
-        price *= 1000f;
+        price *= 10000f;
         return Mathf.RoundToInt(price);
     }
 
@@ -90,7 +90,17 @@ public class Market : MonoBehaviour
         }
     }
 
-
+    public int GetQuantity(Good good)
+    {
+        if(quantityMap.TryGetValue(good, out int value))
+        {
+            return value;
+        }
+        else
+        {
+            return 0;
+        }
+    }
 
     /// <summary>
     /// Stores the order information and returns the cost
@@ -105,13 +115,23 @@ public class Market : MonoBehaviour
         {
             cost += priceMap[gq.good] * gq.quantity;
             quantityMap[gq.good] -= gq.quantity;
-            player.AddOrderToCurrentLedger(gq);
+            if(player != null)
+            {
+                player.AddOrderToCurrentLedger(gq);
+            }
+            
         }
-        player.AddProfitsToCurrentLedger(cost);
+        if(player != null)
+        {
+            player.AddProfitsToCurrentLedger(cost);
+        }
+        
         OnOrderPlaced.Invoke();
         UpdatePrices();
         return cost;
     }
+
+    
 
     /// <summary>
     /// Stores the order information and returns the cost
@@ -123,9 +143,14 @@ public class Market : MonoBehaviour
     {
         int cost = priceMap[order.good] * order.quantity;
         quantityMap[order.good] -= order.quantity;
-        player.AddOrderToCurrentLedger(order);
+        if(player != null)
+        {
+            player.AddOrderToCurrentLedger(order);
 
-        player.AddProfitsToCurrentLedger(cost);
+            player.AddProfitsToCurrentLedger(cost);
+
+        }
+        
         OnOrderPlaced.Invoke();
         UpdatePrices();
         return cost;

@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5107102401691035888, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 7876163215933992861}
     - target: {fileID: 6234909615358193328, guid: 0716fcd2039ce7342b8cbdfb95d6e74a, type: 3}
       propertyPath: m_Name
       value: Forestry
@@ -99,6 +103,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
     - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
+      propertyPath: DisplayText
+      value: Forestry
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: cost.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -140,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: constraints.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: cost.Array.data[0].good
@@ -150,6 +158,10 @@ PrefabInstance:
       propertyPath: constraints.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 80e79fdbdf1c98b429e2491bd1e9bd02, type: 2}
+    - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
+      propertyPath: constraints.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: f28a51dd4430e3046b9b78079d1faee7, type: 2}
     - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: cost.Array.data[0].quantity
       value: 5
@@ -371,3 +383,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0555cc04ad4ceb648bf0f7163dcce124, type: 3}
+--- !u!4 &7876163215933992861 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0555cc04ad4ceb648bf0f7163dcce124, type: 3}
+  m_PrefabInstance: {fileID: 7694252398621165686}
+  m_PrefabAsset: {fileID: 0}

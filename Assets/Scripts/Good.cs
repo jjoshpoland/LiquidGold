@@ -7,4 +7,5 @@ public class Good : ScriptableObject
 {
     public Sprite icon;
     public GameObject model;
+    public int SpriteIndex;
 }

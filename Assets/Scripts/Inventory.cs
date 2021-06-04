@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
     public int maxCapacity;
     public int numTransports;
     public GameObject TransportPrefab;
+    List<GameObject> transports;
 
     public UnityEvent OnEmpty;
     public UnityEvent OnFull;
@@ -39,6 +40,7 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transports = new List<GameObject>();
         if(!AIOnly)
         {
             GlobalInventory.singleton.Add(this);
@@ -48,6 +50,7 @@ public class Inventory : MonoBehaviour
         {
             GameObject t = Instantiate(TransportPrefab, transform);
             t.transform.parent = null;
+            transports.Add(t);
         }
         
         
@@ -68,6 +71,10 @@ public class Inventory : MonoBehaviour
 
     private void OnDestroy()
     {
+        foreach(GameObject g in transports)
+        {
+            Destroy(g);
+        }
         GlobalInventory.singleton.Remove(this);
     }
 
@@ -76,6 +83,8 @@ public class Inventory : MonoBehaviour
     {
         
     }
+
+    
 
     public bool Deposit(Good good)
     {

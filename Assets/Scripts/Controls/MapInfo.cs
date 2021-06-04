@@ -41,11 +41,19 @@ public class MapInfo : MonoBehaviour
         {
             if (hitinfo.collider.TryGetComponent<Tile>(out Tile tile))
             {
+                if(tile.TryGetComponent<Building>(out Building building))
+                {
+                    currentBuilding = building;
+                }
+                else
+                {
+                    currentBuilding = null;
+                }
                 return tile;
             }
             else
             {
-                //Debug.Log("raycast hitting " + hitinfo.collider.name);
+                Debug.Log("raycast hitting " + hitinfo.collider.name);
             }
         }
         return null;
@@ -55,7 +63,16 @@ public class MapInfo : MonoBehaviour
     {
         if(currentTile != null)
         {
-            mapinfotext.text = "X: " + currentTile.coords.x + ", Y: " + currentTile.coords.y + " " + currentTile.name;
+            if(currentTile.type != TileType.Structure)
+            {
+                mapinfotext.text = currentTile.type.ToString();
+
+            }
+            else if(currentBuilding != null)
+            {
+                mapinfotext.text = currentBuilding.DisplayText;
+            }
+
         }
     }
 

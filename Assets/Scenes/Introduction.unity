@@ -913,6 +913,7 @@ GameObject:
   - component: {fileID: 13798645}
   - component: {fileID: 13798647}
   - component: {fileID: 13798646}
+  - component: {fileID: 13798648}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -986,7 +987,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1036,6 +1037,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13798644}
   m_CullTransparentMesh: 1
+--- !u!114 &13798648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13798644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Stone Bought
+
+    Use Buttons to Buy or Sell Stone'
 --- !u!1 &21975742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,8 +1167,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1418,8 +1434,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1569,78 +1585,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51866622}
   m_CullTransparentMesh: 1
---- !u!1 &53976828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 53976829}
-  m_Layer: 5
-  m_Name: ButtonContainer (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &53976829
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53976828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 927567860}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &73552228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 73552229}
-  m_Layer: 5
-  m_Name: ButtonContainer (8)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &73552229
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 73552228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1740280295}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &74440681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1669,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1786,6 +1730,7 @@ GameObject:
   - component: {fileID: 83050811}
   - component: {fileID: 83050813}
   - component: {fileID: 83050812}
+  - component: {fileID: 83050814}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1909,6 +1854,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83050810}
   m_CullTransparentMesh: 1
+--- !u!114 &83050814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83050810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Clay you currently hold in all buildings
 --- !u!1 &83663597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,6 +1923,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &83663600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,6 +2023,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &89311513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2494,6 +2488,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &107870667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2791,10 +2815,10 @@ RectTransform:
   m_Father: {fileID: 1900035430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129710529
 MonoBehaviour:
@@ -2866,7 +2890,7 @@ RectTransform:
   - {fileID: 526118729}
   - {fileID: 1393642727}
   m_Father: {fileID: 1833368099}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3223,7 +3247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3357,7 +3381,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3491,7 +3515,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3625,7 +3649,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3790,8 +3814,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3844,7 +3868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 75.7583, y: -17.585068}
+  m_AnchoredPosition: {x: 75.336, y: -15.357}
   m_SizeDelta: {x: 133.50671, y: 396.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &177502422
@@ -3970,8 +3994,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4072,7 +4096,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4133,6 +4157,7 @@ GameObject:
   - component: {fileID: 199873968}
   - component: {fileID: 199873970}
   - component: {fileID: 199873969}
+  - component: {fileID: 199873971}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4206,7 +4231,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4256,6 +4281,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199873967}
   m_CullTransparentMesh: 1
+--- !u!114 &199873971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199873967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Pulp Bought
+
+    Use Buttons to Buy or Sell Pulp'
 --- !u!1 &200882779
 GameObject:
   m_ObjectHideFlags: 0
@@ -4438,10 +4478,10 @@ RectTransform:
   m_Father: {fileID: 351807804}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202412846
 MonoBehaviour:
@@ -4513,10 +4553,10 @@ RectTransform:
   m_Father: {fileID: 1077965241}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207793781
 MonoBehaviour:
@@ -4569,6 +4609,7 @@ GameObject:
   - component: {fileID: 226246342}
   - component: {fileID: 226246341}
   - component: {fileID: 226246340}
+  - component: {fileID: 226246344}
   m_Layer: 5
   m_Name: OrchardButton
   m_TagString: Untagged
@@ -4589,13 +4630,13 @@ RectTransform:
   m_Children:
   - {fileID: 2014421658}
   - {fileID: 1664530784}
-  m_Father: {fileID: 1525999682}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &226246340
 MonoBehaviour:
@@ -4668,7 +4709,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 226246342}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &226246342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4707,6 +4760,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226246338}
   m_CullTransparentMesh: 0
+--- !u!114 &226246344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226246338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD OLIVE ORCHARD - Produces Olives. Must be built on Rock adjacent to
+    a Road.
+
+    Cost: 5 Wood, 5 Clay'
 --- !u!1 &233940124
 GameObject:
   m_ObjectHideFlags: 0
@@ -4876,7 +4945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50.53}
+  m_AnchoredPosition: {x: 0.0000033975, y: -32.7}
   m_SizeDelta: {x: 132.0099, y: 16.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239255036
@@ -5001,7 +5070,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5132,7 +5201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5156,7 +5225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -15.7337
+      value: 0.000030518
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5192,7 +5261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7.8668823
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5637,7 +5706,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 62249848b5e9c964c9fce09a4e23bad6, type: 2}
   - {fileID: 11400000, guid: b5e128d6e367d0f4bb3233a3a7f54521, type: 2}
   - {fileID: 11400000, guid: bdf4747ec04e86949a155a2ed9829911, type: 2}
-  debugAI: 1
+  debugAI: 0
   BuildingMax: 2000
 --- !u!1 &255825800
 GameObject:
@@ -5683,7 +5752,7 @@ MonoBehaviour:
   m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 1
 --- !u!114 &255825802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5745,10 +5814,10 @@ RectTransform:
   m_Father: {fileID: 1929886927}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &258931592
 MonoBehaviour:
@@ -6364,8 +6433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 65.760994, y: -0.8410034}
-  m_SizeDelta: {x: 131.5318, y: -178.318}
+  m_AnchoredPosition: {x: 65.760994, y: -4.1338034}
+  m_SizeDelta: {x: 131.5318, y: -143.5072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271540961
 MonoBehaviour:
@@ -6457,6 +6526,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &281038816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6684,6 +6759,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &304854524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7092,6 +7173,7 @@ GameObject:
   - component: {fileID: 322104345}
   - component: {fileID: 322104347}
   - component: {fileID: 322104346}
+  - component: {fileID: 322104348}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -7165,7 +7247,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7215,6 +7297,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 322104344}
   m_CullTransparentMesh: 1
+--- !u!114 &322104348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322104344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Olives Bought
+
+    Use Buttons to Buy or Sell Olives'
 --- !u!1 &325344539
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,7 +7664,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7897,6 +7994,7 @@ GameObject:
   - component: {fileID: 351807807}
   - component: {fileID: 351807806}
   - component: {fileID: 351807805}
+  - component: {fileID: 351807809}
   m_Layer: 5
   m_Name: ForestryButton
   m_TagString: Untagged
@@ -7917,13 +8015,13 @@ RectTransform:
   m_Children:
   - {fileID: 1199839886}
   - {fileID: 202412845}
-  m_Father: {fileID: 1543752883}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351807805
 MonoBehaviour:
@@ -7996,7 +8094,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 351807807}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &351807807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8035,6 +8145,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 351807803}
   m_CullTransparentMesh: 0
+--- !u!114 &351807809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351807803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD FORESTRY - Produces Wood while trees are nearby. Must have road access.
+
+    Cost:
+    5 wood'
 --- !u!1 &354682098
 GameObject:
   m_ObjectHideFlags: 0
@@ -8777,6 +8903,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &398843977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9053,6 +9209,7 @@ GameObject:
   - component: {fileID: 426736150}
   - component: {fileID: 426736152}
   - component: {fileID: 426736151}
+  - component: {fileID: 426736153}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9176,6 +9333,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426736149}
   m_CullTransparentMesh: 1
+--- !u!114 &426736153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 426736149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Stone you currently hold in all buildings
 --- !u!1 &431691727
 GameObject:
   m_ObjectHideFlags: 0
@@ -9187,6 +9357,7 @@ GameObject:
   - component: {fileID: 431691728}
   - component: {fileID: 431691730}
   - component: {fileID: 431691729}
+  - component: {fileID: 431691731}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9260,7 +9431,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9310,6 +9481,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431691727}
   m_CullTransparentMesh: 1
+--- !u!114 &431691731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431691727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Oil Bought
+
+    Use Buttons to Buy or Sell Oil'
 --- !u!1 &433375480
 GameObject:
   m_ObjectHideFlags: 0
@@ -9366,6 +9552,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &433375483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9549,6 +9741,7 @@ GameObject:
   - component: {fileID: 441534656}
   - component: {fileID: 441534658}
   - component: {fileID: 441534657}
+  - component: {fileID: 441534659}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -9672,6 +9865,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 441534655}
   m_CullTransparentMesh: 1
+--- !u!114 &441534659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441534655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Jars you currently hold in all buildings
 --- !u!1 &443959765
 GameObject:
   m_ObjectHideFlags: 0
@@ -9728,6 +9934,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &443959768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10357,6 +10593,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &500826391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10424,13 +10666,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1833368099}
-  m_RootOrder: 0
+  m_Father: {fileID: 1292057869}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 563.48, y: -458.31}
-  m_SizeDelta: {x: 342.6176, y: 42.18}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 9.104919, y: 0.13272858}
+  m_SizeDelta: {x: 130.4635, y: 26.253998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505488221
 MonoBehaviour:
@@ -10454,15 +10696,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tile
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5d510aded6ab94546bb6fed1075e7f95, type: 2}
+  m_sharedMaterial: {fileID: 8269743637617139271, guid: 5d510aded6ab94546bb6fed1075e7f95, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11272,6 +11514,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &535210362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11568,10 +11816,10 @@ RectTransform:
   m_Father: {fileID: 1439128797}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544301765
 MonoBehaviour:
@@ -11744,6 +11992,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551976372}
   m_CullTransparentMesh: 1
+--- !u!1 &553498197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 553498198}
+  - component: {fileID: 553498199}
+  m_Layer: 5
+  m_Name: Tooltip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &553498198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553498197}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1366315367}
+  - {fileID: 1528735306}
+  m_Father: {fileID: 1833368099}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 370, y: 217.5}
+  m_SizeDelta: {x: 60, y: 15}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &553498199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 553498197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf6207f94407fd4095203289826c426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanvasTransform: {fileID: 0}
 --- !u!1 &555652830
 GameObject:
   m_ObjectHideFlags: 0
@@ -11889,6 +12188,7 @@ GameObject:
   - component: {fileID: 556529060}
   - component: {fileID: 556529062}
   - component: {fileID: 556529061}
+  - component: {fileID: 556529063}
   m_Layer: 5
   m_Name: Drachmae
   m_TagString: Untagged
@@ -11914,7 +12214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.373726, y: -74.27205}
+  m_AnchoredPosition: {x: 45.374, y: -60.338}
   m_SizeDelta: {x: 90.7573, y: 31.0981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556529061
@@ -11955,6 +12255,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556529059}
   m_CullTransparentMesh: 1
+--- !u!114 &556529063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556529059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Your current holdings of Demurr, the currency used in the Minoan market
 --- !u!1 &567026443
 GameObject:
   m_ObjectHideFlags: 0
@@ -12121,10 +12434,10 @@ RectTransform:
   m_Father: {fileID: 1740280295}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &567205015
 MonoBehaviour:
@@ -12193,15 +12506,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 73552229}
-  - {fileID: 1543752883}
-  - {fileID: 1941104616}
-  - {fileID: 832480259}
-  - {fileID: 1525999682}
-  - {fileID: 1772245117}
-  - {fileID: 53976829}
-  - {fileID: 1451144334}
-  - {fileID: 619743817}
+  - {fileID: 1740280295}
+  - {fileID: 351807804}
+  - {fileID: 1929886927}
+  - {fileID: 1439128797}
+  - {fileID: 226246339}
+  - {fileID: 1900035430}
+  - {fileID: 927567860}
+  - {fileID: 1077965241}
+  - {fileID: 1556861417}
   m_Father: {fileID: 241291538}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12486,10 +12799,10 @@ RectTransform:
   m_Father: {fileID: 1439128797}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &594276448
 MonoBehaviour:
@@ -12622,42 +12935,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 619029537}
   m_CullTransparentMesh: 1
---- !u!1 &619743816
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 619743817}
-  m_Layer: 5
-  m_Name: ButtonContainer (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &619743817
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619743816}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1556861417}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &625532334
 GameObject:
   m_ObjectHideFlags: 0
@@ -12742,7 +13019,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13415,6 +13692,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &653912133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13537,7 +13844,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13702,8 +14009,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -13776,6 +14083,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &666167741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13825,6 +14138,7 @@ GameObject:
   - component: {fileID: 667496511}
   - component: {fileID: 667496513}
   - component: {fileID: 667496512}
+  - component: {fileID: 667496514}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -13898,7 +14212,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -13948,6 +14262,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667496510}
   m_CullTransparentMesh: 1
+--- !u!114 &667496514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667496510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Wood Bought
+
+    Use Buttons to Buy or Sell Wood'
 --- !u!1 &679684565
 GameObject:
   m_ObjectHideFlags: 0
@@ -14377,7 +14706,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1833368099}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -14601,7 +14930,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15052,7 +15381,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15442,6 +15771,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &750486674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15936,10 +16271,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EmptyTilePrefab: {fileID: 2964680816201332858, guid: f6e605342bea4734d9a710026c75406f, type: 3}
   currentBuilding: {fileID: 0}
+  destructionGhost: {fileID: 8293696376541611426, guid: 7deacf70f457fcf48ab3595a03c6d4e2, type: 3}
   Destroying: 0
   OnNotEnoughResources:
     m_PersistentCalls:
       m_Calls: []
+  OnConstraintsNotMet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 86330199a4705b8448df593c32b10c90, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBuildingPlaced:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 75378bb524c83d3429db09d938860eeb, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &778377431
 GameObject:
   m_ObjectHideFlags: 0
@@ -15996,6 +16362,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &778377434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16033,6 +16405,138 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778377431}
+  m_CullTransparentMesh: 1
+--- !u!1 &792722828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 792722829}
+  - component: {fileID: 792722832}
+  - component: {fileID: 792722831}
+  - component: {fileID: 792722830}
+  m_Layer: 5
+  m_Name: DestroyButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &792722829
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792722828}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1940585517}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: -9, y: -10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &792722830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792722828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1940585518}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 774216281}
+        m_TargetAssemblyTypeName: BuildUI, Assembly-CSharp
+        m_MethodName: StartDestroying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &792722831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792722828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.70980394}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 6235720381598610457, guid: ec66e617343906d469dc021058828196, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &792722832
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792722828}
   m_CullTransparentMesh: 1
 --- !u!1 &800178915
 GameObject:
@@ -16361,6 +16865,7 @@ GameObject:
   - component: {fileID: 806528353}
   - component: {fileID: 806528352}
   - component: {fileID: 806528354}
+  - component: {fileID: 806528355}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -16498,6 +17003,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
+--- !u!114 &806528355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806528350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Clay
 --- !u!1 &818328447
 GameObject:
   m_ObjectHideFlags: 0
@@ -16554,6 +17072,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &818328450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16841,8 +17365,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16859,42 +17383,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823382270}
   m_CullTransparentMesh: 1
---- !u!1 &832480258
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 832480259}
-  m_Layer: 5
-  m_Name: ButtonContainer (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &832480259
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 832480258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1439128797}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &842962152
 GameObject:
   m_ObjectHideFlags: 0
@@ -16907,6 +17395,7 @@ GameObject:
   - component: {fileID: 842962155}
   - component: {fileID: 842962154}
   - component: {fileID: 842962156}
+  - component: {fileID: 842962157}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -17044,6 +17533,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
+--- !u!114 &842962157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842962152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Stone
 --- !u!1 &846495112
 GameObject:
   m_ObjectHideFlags: 0
@@ -17221,7 +17723,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -17953,6 +18455,7 @@ GameObject:
   - component: {fileID: 927567863}
   - component: {fileID: 927567862}
   - component: {fileID: 927567861}
+  - component: {fileID: 927567865}
   m_Layer: 5
   m_Name: PotterButton
   m_TagString: Untagged
@@ -17973,13 +18476,13 @@ RectTransform:
   m_Children:
   - {fileID: 1875794096}
   - {fileID: 1947675411}
-  m_Father: {fileID: 53976829}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927567861
 MonoBehaviour:
@@ -18052,7 +18555,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 927567863}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &927567863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18091,6 +18606,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927567859}
   m_CullTransparentMesh: 0
+--- !u!114 &927567865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927567859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD POTTER - Produces Jars. Must be built adjacent to a Road.
+
+    Cost:
+    2 wood, 2 stone, 2 clay'
 --- !u!1 &947414767
 GameObject:
   m_ObjectHideFlags: 0
@@ -18206,8 +18737,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -18371,6 +18902,7 @@ GameObject:
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
   - component: {fileID: 963194230}
+  - component: {fileID: 963194231}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -18488,6 +19020,102 @@ MonoBehaviour:
   speed: 50
   minCamHeight: 15
   maxCamHeight: 100
+--- !u!82 &963194231
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &967285544
 GameObject:
   m_ObjectHideFlags: 0
@@ -18678,6 +19306,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &967894951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18954,6 +19588,7 @@ GameObject:
   - component: {fileID: 998305601}
   - component: {fileID: 998305603}
   - component: {fileID: 998305602}
+  - component: {fileID: 998305604}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -19077,6 +19712,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998305600}
   m_CullTransparentMesh: 1
+--- !u!114 &998305604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998305600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Wood you currently hold in all buildings
 --- !u!1 &1000192645
 GameObject:
   m_ObjectHideFlags: 0
@@ -19388,7 +20036,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -19969,8 +20617,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -20401,6 +21049,7 @@ GameObject:
   - component: {fileID: 1077965244}
   - component: {fileID: 1077965243}
   - component: {fileID: 1077965242}
+  - component: {fileID: 1077965246}
   m_Layer: 5
   m_Name: MillButton
   m_TagString: Untagged
@@ -20421,13 +21070,13 @@ RectTransform:
   m_Children:
   - {fileID: 207793780}
   - {fileID: 1538968764}
-  m_Father: {fileID: 1451144334}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1077965242
 MonoBehaviour:
@@ -20500,7 +21149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1077965244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1077965244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20539,6 +21200,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077965240}
   m_CullTransparentMesh: 0
+--- !u!114 &1077965246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077965240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD OLIVE MILL - produces Olive Pulp. Must be built adjacent to a Road.
+
+    Cost:
+    5 wood, 10 stone'
 --- !u!1 &1153814096
 GameObject:
   m_ObjectHideFlags: 0
@@ -20683,6 +21360,7 @@ GameObject:
   - component: {fileID: 1170542512}
   - component: {fileID: 1170542514}
   - component: {fileID: 1170542513}
+  - component: {fileID: 1170542515}
   m_Layer: 5
   m_Name: TotalLabel
   m_TagString: Untagged
@@ -20806,6 +21484,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170542511}
   m_CullTransparentMesh: 1
+--- !u!114 &1170542515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170542511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Total number of each good purchased during the scenario
 --- !u!1 &1190541732
 GameObject:
   m_ObjectHideFlags: 0
@@ -21055,8 +21746,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -21164,6 +21855,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 774216281}
+        m_TargetAssemblyTypeName: BuildUI, Assembly-CSharp
+        m_MethodName: OnCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnSeasonProgress:
     m_PersistentCalls:
       m_Calls:
@@ -21225,10 +21928,10 @@ RectTransform:
   m_Father: {fileID: 351807804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1199839887
 MonoBehaviour:
@@ -21413,6 +22116,7 @@ GameObject:
   - component: {fileID: 1238453707}
   - component: {fileID: 1238453709}
   - component: {fileID: 1238453708}
+  - component: {fileID: 1238453710}
   m_Layer: 5
   m_Name: Total
   m_TagString: Untagged
@@ -21536,6 +22240,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1238453706}
   m_CullTransparentMesh: 1
+--- !u!114 &1238453710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238453706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Your Total Profits
 --- !u!1 &1261137963
 GameObject:
   m_ObjectHideFlags: 0
@@ -21665,7 +22382,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -21884,6 +22601,136 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282592739}
   m_CullTransparentMesh: 1
+--- !u!1001 &1292057868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1833368099}
+    m_Modifications:
+    - target: {fileID: 677851921864972032, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.11703491
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478249775183488122, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.2689819
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762598080131341127, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Name
+      value: BorderedPaper (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163810774590149324, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.899994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018379412324371744, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018379412324371744, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.0219994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829297656541237763, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.83099365
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829297656541237763, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.8999939
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 169.57312
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.257004
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -95.91345
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.19152832
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+--- !u!224 &1292057869 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+  m_PrefabInstance: {fileID: 1292057868}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1294207539
 GameObject:
   m_ObjectHideFlags: 0
@@ -22030,6 +22877,7 @@ GameObject:
   - component: {fileID: 1298642984}
   - component: {fileID: 1298642983}
   - component: {fileID: 1298642985}
+  - component: {fileID: 1298642986}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -22167,6 +23015,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
+--- !u!114 &1298642986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298642981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Jars
 --- !u!1 &1305883347
 GameObject:
   m_ObjectHideFlags: 0
@@ -22356,6 +23217,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1329533262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22450,6 +23317,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1336209615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22572,7 +23445,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -22668,19 +23541,19 @@ MonoBehaviour:
     quantity: 200
   Quantities:
   - good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
-    quantity: 150
+    quantity: 1500
   - good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
-    quantity: 75
+    quantity: 750
   - good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
-    quantity: 75
+    quantity: 750
   - good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
-    quantity: 20
+    quantity: 200
   - good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
-    quantity: 33
+    quantity: 330
   - good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
-    quantity: 10
+    quantity: 100
   - good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
-    quantity: 5
+    quantity: 50
   OnOrderPlaced:
     m_PersistentCalls:
       m_Calls: []
@@ -23024,6 +23897,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1354477529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23062,6 +23941,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354477526}
   m_CullTransparentMesh: 1
+--- !u!1 &1356126670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2762598080131341127, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+  m_PrefabInstance: {fileID: 1400289110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1356126671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356126670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: CURRENT SEASON - a new season will start when the bar is filled
 --- !u!1 &1356836911
 GameObject:
   m_ObjectHideFlags: 0
@@ -23182,7 +24079,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -23232,6 +24129,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361964882}
   m_CullTransparentMesh: 1
+--- !u!1001 &1363479122
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1833368099}
+    m_Modifications:
+    - target: {fileID: 677851921864972032, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.11703491
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478249775183488122, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.2689972
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478249775183488122, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.7998962
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762598080131341127, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Name
+      value: BorderedPaper (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018379412324371744, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 4.5000153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6018379412324371744, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.0219994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829297656541237763, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.83099365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 25.6041
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.0933
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -80.30054
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13.207214
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
 --- !u!1 &1364010831
 GameObject:
   m_ObjectHideFlags: 0
@@ -23365,6 +24383,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1364010831}
   m_CullTransparentMesh: 1
+--- !u!1 &1366315366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366315367}
+  - component: {fileID: 1366315369}
+  - component: {fileID: 1366315368}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1366315367
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366315366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 553498198}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 60, y: 15}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1366315368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366315366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1366315369
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366315366}
+  m_CullTransparentMesh: 1
 --- !u!1 &1368968151
 GameObject:
   m_ObjectHideFlags: 0
@@ -23449,7 +24542,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -23748,8 +24841,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -23798,10 +24891,10 @@ RectTransform:
   m_Father: {fileID: 1740280295}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 25, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1392232692
 MonoBehaviour:
@@ -23962,7 +25055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -24414,6 +25507,7 @@ GameObject:
   - component: {fileID: 1424506105}
   - component: {fileID: 1424506107}
   - component: {fileID: 1424506106}
+  - component: {fileID: 1424506108}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -24537,6 +25631,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424506104}
   m_CullTransparentMesh: 1
+--- !u!114 &1424506108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424506104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Olive Oil you currently hold in all buildings
 --- !u!1 &1427759907
 GameObject:
   m_ObjectHideFlags: 0
@@ -24759,6 +25866,7 @@ GameObject:
   - component: {fileID: 1439128800}
   - component: {fileID: 1439128799}
   - component: {fileID: 1439128798}
+  - component: {fileID: 1439128802}
   m_Layer: 5
   m_Name: QuarryButton
   m_TagString: Untagged
@@ -24779,13 +25887,13 @@ RectTransform:
   m_Children:
   - {fileID: 594276447}
   - {fileID: 544301764}
-  m_Father: {fileID: 832480259}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439128798
 MonoBehaviour:
@@ -24858,7 +25966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1439128800}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1439128800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24897,42 +26017,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439128796}
   m_CullTransparentMesh: 0
---- !u!1 &1451144333
-GameObject:
+--- !u!114 &1439128802
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1451144334}
-  m_Layer: 5
-  m_Name: ButtonContainer (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1451144334
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451144333}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1077965241}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_GameObject: {fileID: 1439128796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD STONE QUARRY - Produces Stone. Must be built on Rock adjacent to a
+    Road.
+
+    Cost: 5 wood'
 --- !u!1 &1464114827
 GameObject:
   m_ObjectHideFlags: 0
@@ -24945,6 +26045,7 @@ GameObject:
   - component: {fileID: 1464114830}
   - component: {fileID: 1464114829}
   - component: {fileID: 1464114831}
+  - component: {fileID: 1464114832}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -25082,6 +26183,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
+--- !u!114 &1464114832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464114827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Olives
 --- !u!1 &1468496618
 GameObject:
   m_ObjectHideFlags: 0
@@ -25166,7 +26280,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -25375,7 +26489,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -25481,6 +26595,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1492963492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25668,6 +26788,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1512489689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25718,6 +26868,7 @@ GameObject:
   - component: {fileID: 1516534180}
   - component: {fileID: 1516534179}
   - component: {fileID: 1516534181}
+  - component: {fileID: 1516534182}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -25855,6 +27006,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+--- !u!114 &1516534182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516534177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Wood
 --- !u!1 &1517030597
 GameObject:
   m_ObjectHideFlags: 0
@@ -25988,7 +27152,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1517030597}
   m_CullTransparentMesh: 1
---- !u!1 &1525999681
+--- !u!1 &1528735305
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25996,34 +27160,132 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1525999682}
+  - component: {fileID: 1528735306}
+  - component: {fileID: 1528735308}
+  - component: {fileID: 1528735307}
   m_Layer: 5
-  m_Name: ButtonContainer (3)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1525999682
+--- !u!224 &1528735306
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1525999681}
+  m_GameObject: {fileID: 1528735305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 226246339}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 4
+  m_Children: []
+  m_Father: {fileID: 553498198}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1528735307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528735305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 8
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
+  m_fontSizeMax: 16
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 2, y: 2, z: 2, w: 2}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1528735308
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528735305}
+  m_CullTransparentMesh: 1
 --- !u!1 &1538968763
 GameObject:
   m_ObjectHideFlags: 0
@@ -26056,10 +27318,10 @@ RectTransform:
   m_Father: {fileID: 1077965241}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1538968765
 MonoBehaviour:
@@ -26099,42 +27361,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1538968763}
   m_CullTransparentMesh: 1
---- !u!1 &1543752882
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1543752883}
-  m_Layer: 5
-  m_Name: ButtonContainer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1543752883
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543752882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 351807804}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1556861416
 GameObject:
   m_ObjectHideFlags: 0
@@ -26148,6 +27374,7 @@ GameObject:
   - component: {fileID: 1556861420}
   - component: {fileID: 1556861419}
   - component: {fileID: 1556861418}
+  - component: {fileID: 1556861422}
   m_Layer: 5
   m_Name: PressButton
   m_TagString: Untagged
@@ -26168,13 +27395,13 @@ RectTransform:
   m_Children:
   - {fileID: 1640067583}
   - {fileID: 1781840139}
-  m_Father: {fileID: 619743817}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556861418
 MonoBehaviour:
@@ -26188,7 +27415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0255efd62752644428de4a0f390667ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  building: {fileID: 4609593208590012821, guid: acf1b466324802c4981ab364053640ea, type: 3}
+  building: {fileID: 6588524544060527366, guid: 7be8c4fbfeacd1144935e4b9dbc61288, type: 3}
   OnSelect:
     m_PersistentCalls:
       m_Calls:
@@ -26247,7 +27474,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1556861420}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1556861420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26286,6 +27525,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556861416}
   m_CullTransparentMesh: 0
+--- !u!114 &1556861422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556861416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD OIL PRESS - Produces Olive Oil. Must be built adjacent to a Road.
+
+    Cost:
+    5 Wood, 5 Stone, 5 Clay'
 --- !u!1 &1563793680
 GameObject:
   m_ObjectHideFlags: 0
@@ -26451,10 +27706,10 @@ RectTransform:
   m_Father: {fileID: 1900035430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572641679
 MonoBehaviour:
@@ -26550,6 +27805,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1574133014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26599,6 +27860,7 @@ GameObject:
   - component: {fileID: 1594620293}
   - component: {fileID: 1594620295}
   - component: {fileID: 1594620294}
+  - component: {fileID: 1594620296}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -26672,7 +27934,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -26722,6 +27984,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594620292}
   m_CullTransparentMesh: 1
+--- !u!114 &1594620296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594620292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Clay Bought
+
+    Use Buttons to Buy or Sell Clay'
+--- !u!1 &1594795154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2762598080131341127, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+  m_PrefabInstance: {fileID: 1363479122}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1594795155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594795154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: DESTROY BUILDINGS - destroys buildings and roads, no refunds!
 --- !u!1 &1597521993
 GameObject:
   m_ObjectHideFlags: 0
@@ -26733,6 +28028,7 @@ GameObject:
   - component: {fileID: 1597521994}
   - component: {fileID: 1597521996}
   - component: {fileID: 1597521995}
+  - component: {fileID: 1597521997}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -26856,6 +28152,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597521993}
   m_CullTransparentMesh: 1
+--- !u!114 &1597521997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597521993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Olives you currently hold in all buildings
 --- !u!1 &1609869791
 GameObject:
   m_ObjectHideFlags: 0
@@ -27084,6 +28393,36 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
   player: {fileID: 2036339538}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 921fca71cfd2b0d41afb8491e5da03f2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1633862983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27408,10 +28747,10 @@ RectTransform:
   m_Father: {fileID: 1556861417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640067584
 MonoBehaviour:
@@ -27793,8 +29132,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -27956,6 +29295,7 @@ GameObject:
   - component: {fileID: 1663693847}
   - component: {fileID: 1663693846}
   - component: {fileID: 1663693848}
+  - component: {fileID: 1663693849}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -28093,6 +29433,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
+--- !u!114 &1663693849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663693844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Olive Pulp
 --- !u!1 &1664530783
 GameObject:
   m_ObjectHideFlags: 0
@@ -28125,10 +29478,10 @@ RectTransform:
   m_Father: {fileID: 226246339}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1664530785
 MonoBehaviour:
@@ -28252,7 +29605,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -28313,6 +29666,7 @@ GameObject:
   - component: {fileID: 1675934157}
   - component: {fileID: 1675934159}
   - component: {fileID: 1675934158}
+  - component: {fileID: 1675934160}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -28436,6 +29790,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675934156}
   m_CullTransparentMesh: 1
+--- !u!114 &1675934160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675934156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Amount of Pulp you currently hold in all buildings
 --- !u!1 &1696209882
 GameObject:
   m_ObjectHideFlags: 0
@@ -28492,6 +29859,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
   player: {fileID: 250518347}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1696209885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29016,7 +30389,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -29098,10 +30471,10 @@ RectTransform:
   m_Father: {fileID: 1929886927}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725085819
 MonoBehaviour:
@@ -29348,7 +30721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -29404,11 +30777,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -325.4728
+      value: -325.47278
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 27.365091
+      value: 27.365112
       objectReference: {fileID: 0}
     - target: {fileID: 5492221008051293759, guid: 1e4e42fcc354bb547be1729a789c14b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -29442,6 +30815,7 @@ GameObject:
   - component: {fileID: 1740280298}
   - component: {fileID: 1740280297}
   - component: {fileID: 1740280296}
+  - component: {fileID: 1740280300}
   m_Layer: 5
   m_Name: RoadButton
   m_TagString: Untagged
@@ -29462,13 +30836,13 @@ RectTransform:
   m_Children:
   - {fileID: 567205014}
   - {fileID: 1392232691}
-  m_Father: {fileID: 73552229}
+  m_Father: {fileID: 579955943}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740280296
 MonoBehaviour:
@@ -29541,7 +30915,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1740280298}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1740280298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29580,6 +30966,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740280294}
   m_CullTransparentMesh: 0
+--- !u!114 &1740280300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740280294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD ROAD - required to transport goods.
+
+    Cost: 1 wood, 1 stone'
 --- !u!1 &1748045821
 GameObject:
   m_ObjectHideFlags: 0
@@ -29636,6 +31037,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1748045824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29685,6 +31092,7 @@ GameObject:
   - component: {fileID: 1760574759}
   - component: {fileID: 1760574761}
   - component: {fileID: 1760574760}
+  - component: {fileID: 1760574762}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -29758,7 +31166,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -29808,42 +31216,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760574758}
   m_CullTransparentMesh: 1
---- !u!1 &1772245116
-GameObject:
+--- !u!114 &1760574762
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1772245117}
-  m_Layer: 5
-  m_Name: ButtonContainer (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1772245117
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772245116}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1900035430}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_GameObject: {fileID: 1760574758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Total Jars Bought
+
+    Use Buttons to Buy or Sell Jars'
 --- !u!1 &1774112715
 GameObject:
   m_ObjectHideFlags: 0
@@ -30277,10 +31664,10 @@ RectTransform:
   m_Father: {fileID: 1556861417}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781840140
 MonoBehaviour:
@@ -30332,6 +31719,7 @@ GameObject:
   - component: {fileID: 1787509305}
   - component: {fileID: 1787509304}
   - component: {fileID: 1787509306}
+  - component: {fileID: 1787509307}
   m_Layer: 5
   m_Name: Price
   m_TagString: Untagged
@@ -30469,6 +31857,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
+--- !u!114 &1787509307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787509302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Price of Olive Oil
 --- !u!1 &1799231830
 GameObject:
   m_ObjectHideFlags: 0
@@ -30658,6 +32059,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
   player: {fileID: 355496193}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1800162733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30944,8 +32351,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -4022672852463893150, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -30993,8 +32400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e548d16fcf8c4c40814dd0fa8efb8f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 50
-  seed: 1339
+  size: 15
+  seed: 1469
   grassPrefab: {fileID: 2964680816201332858, guid: f6e605342bea4734d9a710026c75406f, type: 3}
   waterPrefab: {fileID: 8810635522414917910, guid: dc1b3e682a3baf24eb2cf8f3cce16860, type: 3}
   rockyPrefab: {fileID: -7104754065148796821, guid: 491857cce6f5f1a45aa2ef816da8c716, type: 3}
@@ -31282,6 +32689,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1818344959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31590,7 +33003,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -31840,12 +33253,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 505488220}
   - {fileID: 708182779}
   - {fileID: 131713747}
   - {fileID: 241291538}
   - {fileID: 1737579584}
   - {fileID: 1400289111}
+  - {fileID: 1940585517}
+  - {fileID: 1292057869}
+  - {fileID: 553498198}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32096,10 +33511,10 @@ RectTransform:
   m_Father: {fileID: 927567860}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875794097
 MonoBehaviour:
@@ -32286,6 +33701,7 @@ GameObject:
   - component: {fileID: 1900035433}
   - component: {fileID: 1900035432}
   - component: {fileID: 1900035431}
+  - component: {fileID: 1900035435}
   m_Layer: 5
   m_Name: WarehouseButton
   m_TagString: Untagged
@@ -32306,13 +33722,13 @@ RectTransform:
   m_Children:
   - {fileID: 1572641678}
   - {fileID: 129710528}
-  m_Father: {fileID: 1772245117}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900035431
 MonoBehaviour:
@@ -32385,7 +33801,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1900035433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1900035433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32424,6 +33852,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900035429}
   m_CullTransparentMesh: 0
+--- !u!114 &1900035435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900035429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD WAREHOUSE - Stores up to 25 goods. Must be built adjacent to a Road.
+
+    Cost:
+    5 wood '
 --- !u!1 &1902728801
 GameObject:
   m_ObjectHideFlags: 0
@@ -32641,7 +34085,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -33043,7 +34487,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -33106,6 +34550,7 @@ GameObject:
   - component: {fileID: 1929886929}
   - component: {fileID: 1929886928}
   - component: {fileID: 1929886931}
+  - component: {fileID: 1929886932}
   m_Layer: 5
   m_Name: ClayPitButton
   m_TagString: Untagged
@@ -33126,13 +34571,13 @@ RectTransform:
   m_Children:
   - {fileID: 258931591}
   - {fileID: 1725085818}
-  m_Father: {fileID: 1941104616}
-  m_RootOrder: 0
+  m_Father: {fileID: 579955943}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929886928
 MonoBehaviour:
@@ -33177,7 +34622,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1929886929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963194231}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8de4af1fee564814bbe0c86a117f2eaf, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1929886929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33244,42 +34701,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &1941104615
-GameObject:
+--- !u!114 &1929886932
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1941104616}
-  m_Layer: 5
-  m_Name: ButtonContainer (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1941104616
+  m_GameObject: {fileID: 1929886926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c6eba076583e5445abe2b1e5ad35bb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'BUILD CLAY PIT - Produces Clay. Must be built adjacent to Water and a Road.
+
+    Cost:
+    3 wood, 2 stone'
+--- !u!224 &1940585517 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7926015738522643796, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+  m_PrefabInstance: {fileID: 1363479122}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1941104615}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1929886927}
-  m_Father: {fileID: 579955943}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1940585518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1288818820137870342, guid: b6e56a9f65cfcfd4092cddfa8586ac9c, type: 3}
+  m_PrefabInstance: {fileID: 1363479122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594795154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947675410
 GameObject:
   m_ObjectHideFlags: 0
@@ -33312,10 +34765,10 @@ RectTransform:
   m_Father: {fileID: 927567860}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1947675412
 MonoBehaviour:
@@ -33624,7 +35077,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -33984,7 +35437,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -34090,6 +35543,12 @@ MonoBehaviour:
   good: {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
   player: {fileID: 487853161}
   quantity: {fileID: 0}
+  OnBuySuccess:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSellSuccess:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2009483392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34160,10 +35619,10 @@ RectTransform:
   m_Father: {fileID: 226246339}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -18, y: -18}
+  m_SizeDelta: {x: 22, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2014421659
 MonoBehaviour:
@@ -34446,8 +35905,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.1885, y: 0}
-  m_SizeDelta: {x: -59.6229, y: 0}
+  m_AnchoredPosition: {x: 18.499996, y: 0}
+  m_SizeDelta: {x: -37, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2033968192
 MonoBehaviour:
@@ -34706,8 +36165,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -35475,7 +36934,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.9
+  m_fontSize: 23.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -35525,6 +36984,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098240001}
   m_CullTransparentMesh: 1
+--- !u!1 &2100873335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100873337}
+  - component: {fileID: 2100873336}
+  m_Layer: 0
+  m_Name: AIBuyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2100873336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100873335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a31a077fe896b94e8b7a0e745985e8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goods:
+  - {fileID: 11400000, guid: 60af39fa1cae6da4298661d8419e36b2, type: 2}
+  - {fileID: 11400000, guid: 56254f9d02e028847b5f0b563be60950, type: 2}
+  - {fileID: 11400000, guid: 7ed5df7689db267438144b76b5bfca0f, type: 2}
+  - {fileID: 11400000, guid: 0405e3fe49cd2cf458f5a8d651bc375d, type: 2}
+  - {fileID: 11400000, guid: bb5279f8f2ef6bc4186e356715a7f8a4, type: 2}
+  - {fileID: 11400000, guid: ec83b472e4236854bb6bcf0e9bb8c88f, type: 2}
+  - {fileID: 11400000, guid: 31bfe0cd7f2e8b24086e220d39c0a622, type: 2}
+  share: 0.025
+  rate: 10
+  eventChance: 0.05
+  quantityThreshold: 70
+  surplusAmount: -250
+--- !u!4 &2100873337
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100873335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133247414
 GameObject:
   m_ObjectHideFlags: 0
@@ -35867,8 +37382,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 5963238215749560811, guid: c9ce502e9ca5e1e4ea7851367540003b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

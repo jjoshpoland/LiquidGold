@@ -28,8 +28,8 @@ public class Producer : MonoBehaviour
         if(productionRecipe != null)
         {
             processingGoods = new List<Good>(productionRecipe.inputs.Count);
-            
-            
+
+            FloatingTextManager ftm = gameObject.GetComponent<FloatingTextManager>();
             foreach (Good input in productionRecipe.inputs)
             {
                 processingGoods.Add(null);
@@ -46,6 +46,7 @@ public class Producer : MonoBehaviour
 
                 Inventory newInput = gameObject.AddComponent<Inventory>();
                 newInput.Init();
+                newInput.OnWithdraw.AddListener(ftm.DoNegativeFloatingText);
                 newInput.enabled = true;
                 newInput.allowedGoods.Add(input);
                 newInput.requestedGoods.Add(input);

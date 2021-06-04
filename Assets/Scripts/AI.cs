@@ -20,11 +20,13 @@ public class AI : MonoBehaviour
     public List<UtilityAction> marketActions;
     Dictionary<int, float> productionTimes;
     Dictionary<Building, int> buildingCounts;
+    Dictionary<int, int> harvesterTracker;
     public bool debugAI;
     public int BuildingMax;
 
     private void Awake()
     {
+        harvesterTracker = new Dictionary<int, int>();
         buildingCounts = new Dictionary<Building, int>();
         productionTimes = new Dictionary<int, float>();
         globalInventory = GetComponent<GlobalInventory>();
@@ -61,6 +63,7 @@ public class AI : MonoBehaviour
 
     void Produce()
     {
+        List<int> buildingsToRemove = new List<int>();
         //production
         //check each building for a producer
         for(int i = 0; i < buildings.Count; i++)
@@ -99,13 +102,26 @@ public class AI : MonoBehaviour
                         mainInventory.Deposit(harvester.Target);
 
                         productionTimes[i] = Time.time;
+                        harvesterTracker[i] = harvesterTracker[i] + 1;
+                        if(harvesterTracker[i] > harvester.AIMaxHarvests)
+                        {
+                            buildingsToRemove.Add(i);
+                            buildingCounts[harvester] = buildingCounts[harvester] - 1;
+                        }
                     }
                 }
                 else
                 {
                     productionTimes.Add(i, Time.time);
+                    harvesterTracker.Add(i, 1);
                 }
             }
+        }
+
+        for (int i = 0; i < buildingsToRemove.Count; i++)
+        {
+            buildings.RemoveAt(buildingsToRemove[i]);
+            
         }
     }
 
