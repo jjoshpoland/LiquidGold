@@ -302,6 +302,10 @@ PrefabInstance:
       value: Warehouse
       objectReference: {fileID: 0}
     - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 9070555765922572172, guid: 1aeb3a6f333672e448ddb05cfb9adf50, type: 3}
+    - target: {fileID: 7091408338495519298, guid: 58a98cfea741e6d45b268ef2da72b447, type: 3}
       propertyPath: cost.Array.size
       value: 1
       objectReference: {fileID: 0}

@@ -10,6 +10,7 @@ public class TileMap : MonoBehaviour
     float[,] values;
     public int size;
     public int seed;
+    public bool randomSeed;
     float perlinSeed;
     public Tile grassPrefab;
     public Tile waterPrefab;
@@ -38,6 +39,10 @@ public class TileMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(randomSeed)
+        {
+            seed = Random.Range(0, int.MaxValue);
+        }
         Random.InitState(seed);
         perlinSeed = Random.Range(0f, 1f);
         simplexNoise = new SimplexNoiseGenerator(seed.ToString());

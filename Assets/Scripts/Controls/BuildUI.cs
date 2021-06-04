@@ -15,10 +15,14 @@ public class BuildUI : MonoBehaviour
     public GameObject destructionGhost;
     PlayerInput input;
     public bool Destroying;
+    public Material buildingGhostGood;
+    public Material buildingGhostBad;
     bool dragging;
     public UnityEvent OnNotEnoughResources;
     public UnityEvent OnConstraintsNotMet;
     public UnityEvent OnBuildingPlaced;
+    public UnityEvent OnDestroyBuilding;
+    public UnityEvent OnEsc;
     
     // Start is called before the first frame update
     void Start()
@@ -33,11 +37,39 @@ public class BuildUI : MonoBehaviour
         if (currentTile != null && buildingGhost != null)
         {
             buildingGhost.transform.position = currentTile.transform.position + new Vector3(0, .25f, 0);
+            if(!EvaluateBuildingPlacement())
+            {
+                AssignGhostMaterial(Color.red);
+            }
+            else
+            {
+                AssignGhostMaterial(Color.green);
+            }
         }
         if(dragging)
         {
             PlaceCurrentBuilding();
         }
+    }
+
+    void AssignGhostMaterial(Color color)
+    {
+        MeshRenderer mr = buildingGhost.GetComponent<MeshRenderer>();
+        for (int i = 0; i < mr.materials.Length; i++)
+        {
+            //if(mr.materials[i] != mat)
+            mr.materials[i].color = color;
+        }
+        MeshRenderer[] mr2 = buildingGhost.GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer subMr in mr2)
+        {
+            for (int i = 0; i < subMr.materials.Length; i++)
+            {
+                //if (subMr.materials[i] != mat)
+                    subMr.materials[i].color = color;
+            }
+        }
+        
     }
 
     /// <summary>
@@ -75,12 +107,7 @@ public class BuildUI : MonoBehaviour
     /// </summary>
     void PlaceCurrentBuilding()
     {
-        if(buildingGhost != null 
-            && currentBuilding != null 
-            && currentTile != null 
-            && currentTile.type != TileType.Structure 
-            && currentBuilding.EvaluateConstraints(currentTile)
-            )
+        if(EvaluateBuildingPlacement())
         {
             if(!GlobalInventory.singleton.PullGoods(currentBuilding.cost))
             {
@@ -111,8 +138,17 @@ public class BuildUI : MonoBehaviour
             {
                 OnConstraintsNotMet.Invoke();
             }
-            
+            //Debug.Log("tried to place " + currentBuilding + " on " + currentTile);
         }
+    }
+
+    bool EvaluateBuildingPlacement()
+    {
+        return buildingGhost != null
+            && currentBuilding != null
+            && currentTile != null
+            && currentTile.type != TileType.Structure
+            && currentBuilding.EvaluateConstraints(currentTile);
     }
 
     void DestroyCurrentBuilding()
@@ -122,7 +158,7 @@ public class BuildUI : MonoBehaviour
         {
             if(TileMap.singleton.ReplaceTile(currentTile.coords, EmptyTilePrefab))
             {
-                
+                OnDestroyBuilding.Invoke();
             }
         }
     }
@@ -149,23 +185,29 @@ public class BuildUI : MonoBehaviour
 
     public void OnCancel()
     {
+        bool nothingToCancel = true;
         if (buildingGhost != null)
         {
             Destroy(buildingGhost);
+            nothingToCancel = false;
         }
         if (Destroying)
         {
             Destroying = false;
+            nothingToCancel = false;
         }
-
         if (dragging)
         {
             dragging = false;
+            nothingToCancel = false;
         }
 
         currentBuilding = null;
         buildingGhost = null;
-
+        if(nothingToCancel)
+        {
+            OnEsc.Invoke();
+        }
     }
 
     void OnAltSelect()

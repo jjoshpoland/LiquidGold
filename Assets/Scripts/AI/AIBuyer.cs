@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AIBuyer : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class AIBuyer : MonoBehaviour
     public int quantityThreshold = 70;
     public int surplusAmount = -250;
     float lastBuy;
+    public UnityEvent<Good> OnCrash;
+    public UnityEvent<Good> OnSurplus;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,11 +36,13 @@ public class AIBuyer : MonoBehaviour
                 {
                     //crash
                     PlaceTargetedBuy(targetGood, .75f);
+                    OnCrash.Invoke(targetGood);
                 }
                 else
                 {
                     //surplus
                     PlaceSurplusSell(targetGood);
+                    OnSurplus.Invoke(targetGood);
                 }
             }
 

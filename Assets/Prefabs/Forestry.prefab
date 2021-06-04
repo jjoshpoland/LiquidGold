@@ -107,6 +107,10 @@ PrefabInstance:
       value: Forestry
       objectReference: {fileID: 0}
     - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 8287205248244086212, guid: 4713a6f6015e5f64bb235d9463f6a605, type: 3}
+    - target: {fileID: 1108671760940509237, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: cost.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -288,7 +292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4486187671631322732, guid: 361047bab63864f42a490c665966ddcf, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 361047bab63864f42a490c665966ddcf, type: 3}

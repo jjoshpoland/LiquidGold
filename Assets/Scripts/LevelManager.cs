@@ -6,6 +6,19 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager singleton;
+    public int TargetLevel
+    {
+        get
+        {
+            return targetLevel; 
+        }
+        set
+        {
+            targetLevel = value;
+        }
+    }
+
+    int targetLevel;
     private void Awake()
     {
         singleton = this;
@@ -26,5 +39,19 @@ public class LevelManager : MonoBehaviour
     public void LoadLevel(int level)
     {
         SceneManager.LoadScene(level);
+    }
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(targetLevel);
+    }
+
+    public void QuitToMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }

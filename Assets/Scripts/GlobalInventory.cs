@@ -6,11 +6,13 @@ using UnityEngine.Events;
 public class GlobalInventory : MonoBehaviour
 {
     public bool isSingleton;
+    public int startingDrachmae;
     public static GlobalInventory singleton;
     public List<Inventory> inventories;
     public UnityEvent OnGoodsUpdated;
     public UnityEvent<int> OnDrachmaeUpdated;
     public UnityEvent<string> OnDrachmaeUpdated_Label;
+    
 
     Dictionary<Good, int> quantities;
     int drachmae = 0;
@@ -35,6 +37,7 @@ public class GlobalInventory : MonoBehaviour
         {
             singleton = this;
         }
+        drachmae = startingDrachmae;
         
     }
     // Start is called before the first frame update

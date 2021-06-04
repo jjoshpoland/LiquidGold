@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class SeasonManager : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class SeasonManager : MonoBehaviour
     public float MarketSeasonDuration = 60f;
     int currentSeason = -1;
     int currentMarketSeason = -1;
+    public Transform Sun;
+    public float dayLightSpeed;
+    public TMP_Text seasonText;
+    public bool StartOnStart;
     public UnityEvent OnSeasonEnd;
     public UnityEvent OnSeasonStart;
     public UnityEvent OnMarketSeasonStart;
@@ -18,7 +23,7 @@ public class SeasonManager : MonoBehaviour
     float seasonStart;
     bool seasonActive;
     bool marketSeasonActive;
-
+    
     public bool IsMarketSeason
     {
         get
@@ -42,7 +47,11 @@ public class SeasonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartNewSeason();
+        if(StartOnStart)
+        {
+            StartNewSeason();
+        }
+        
     }
 
     // Update is called once per frame
@@ -72,14 +81,21 @@ public class SeasonManager : MonoBehaviour
                 OnMarketSeasonEnd.Invoke();
             }
         }
+        Sun.transform.Rotate(new Vector3(dayLightSpeed * Time.deltaTime, 0, 0));
 
     }
 
     public void StartNewSeason()
     {
+        
         currentSeason++;
+        if (VictoryCondition.singleton.CheckVictory())
+        {
+            VictoryCondition.singleton.OnVictory.Invoke();
+        }
         seasonActive = true;
         seasonStart = Time.time;
+        seasonText.text = "Season " + (currentSeason + 1).ToString();
         OnSeasonStart.Invoke();
     }
 
@@ -88,6 +104,7 @@ public class SeasonManager : MonoBehaviour
         currentMarketSeason++;
         marketSeasonActive = true;
         seasonStart = Time.time;
+        seasonText.text = "Market Season " + (currentMarketSeason + 1).ToString();
         OnMarketSeasonStart.Invoke();
     }
 }

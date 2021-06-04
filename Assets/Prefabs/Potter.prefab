@@ -4854,6 +4854,10 @@ PrefabInstance:
       value: Potter
       objectReference: {fileID: 0}
     - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 1268190495049821773, guid: d47a9db44c5c87e48a3297c6f6bc9e76, type: 3}
+    - target: {fileID: 3856947167117672444, guid: 3d05d22e38316764f9a99278b45ca1bc, type: 3}
       propertyPath: cost.Array.size
       value: 3
       objectReference: {fileID: 0}

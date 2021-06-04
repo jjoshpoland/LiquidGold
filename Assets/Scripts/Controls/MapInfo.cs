@@ -53,7 +53,7 @@ public class MapInfo : MonoBehaviour
             }
             else
             {
-                Debug.Log("raycast hitting " + hitinfo.collider.name);
+                //Debug.Log("raycast hitting " + hitinfo.collider.name);
             }
         }
         return null;

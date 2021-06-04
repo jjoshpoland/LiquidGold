@@ -4,5 +4,23 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8ab26c3f4fa66b24d999427b17f130e1
+  - enabled: 1
+    path: Assets/Scenes/Introduction.unity
+    guid: 7c6404ddc69c1b14a8535cc875ed1465
+  - enabled: 1
+    path: Assets/Scenes/Zakros.unity
+    guid: 8982b2474ec36564ab3c0d8d49338a50
+  - enabled: 1
+    path: Assets/Scenes/Malia.unity
+    guid: b32a454cc94830c4f8fa49ada5d1b230
+  - enabled: 1
+    path: Assets/Scenes/Phaistos.unity
+    guid: 0ce9f61c8fc2159449dd717bfab59254
+  - enabled: 1
+    path: Assets/Scenes/OpenKnossos.unity
+    guid: 6ce09dce8a1842143954dc783cceaf2e
   m_configObjects: {}

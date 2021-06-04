@@ -14,6 +14,7 @@ public class AI : MonoBehaviour
 
     public float decisionTime = 2f;
     public float marketDecisionTime = 1f;
+    public bool randomizeTarget;
     float lastDecision;
 
     public List<UtilityAction> seasonActions;
@@ -38,6 +39,11 @@ public class AI : MonoBehaviour
     void Start()
     {
         lastDecision = Time.time;
+        if(randomizeTarget)
+        {
+            GoodQuantity randomGQ = Market.singleton.Prices[Random.Range(0, Market.singleton.Prices.Count)];
+            targetGood = randomGQ.good;
+        }
     }
 
     // Update is called once per frame

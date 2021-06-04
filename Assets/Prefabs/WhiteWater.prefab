@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   coords: {x: 0, y: 0}
+  RandomRotationOnStart: 0
 --- !u!1 &5157957199106813434
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +74,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5157957199106813434}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4531187218298804612}
@@ -106,7 +107,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad891717717c7ed448f14aa794f25586, type: 2}
+  - {fileID: 2100000, guid: 99913f0b1109bd948b5a1b44fea1eeac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
